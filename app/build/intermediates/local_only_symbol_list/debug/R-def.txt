@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+id clienteText
+id descripcionText
+id empresaText
+id estadoText
+id fechaText
+id gestionText
+id itemEstado
+id itemTitle
+id recyclerView
+id titleText
+layout activity_detail
+layout activity_main
+layout item_incident

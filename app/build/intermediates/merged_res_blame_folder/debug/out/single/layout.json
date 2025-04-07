@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.abcallmobile.app-mergeDebugResources-28:/layout/activity_detail.xml",
+        "source": "com.example.abcallmobile.app-main-31:/layout/activity_detail.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-mergeDebugResources-28:/layout/item_incident.xml",
+        "source": "com.example.abcallmobile.app-main-31:/layout/item_incident.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-mergeDebugResources-28:/layout/activity_main.xml",
+        "source": "com.example.abcallmobile.app-main-31:/layout/activity_main.xml"
+    }
+]
