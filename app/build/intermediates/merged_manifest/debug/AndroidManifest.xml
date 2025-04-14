@@ -26,15 +26,28 @@
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" >
         <activity
-            android:name="com.example.abcallmobile.MainActivity"
+            android:name="com.example.abcallmobile.WelcomeActivity"
             android:exported="true"
-            android:label="ABCallMobile" >
+            android:label="ABCall" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.abcallmobile.ClientSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.abcallmobile.MainActivity"
+            android:exported="false"
+            android:label="Listado de Incidentes" />
+        <activity
+            android:name="com.example.abcallmobile.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.abcallmobile.CreateIncidentActivity"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

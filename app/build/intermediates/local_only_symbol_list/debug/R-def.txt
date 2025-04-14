@@ -1,15 +1,25 @@
 R_DEF: Internal format may change without notice
 local
+drawable headset
+id btnCrearIncidente
+id btnEmpezar
+id btnNuevoIncidente
 id clienteText
 id descripcionText
 id empresaText
 id estadoText
 id fechaText
 id gestionText
+id gridClientes
+id inputAsunto
+id inputDescripcion
 id itemEstado
 id itemTitle
 id recyclerView
 id titleText
+layout activity_client_selection
+layout activity_create_incident
 layout activity_detail
 layout activity_main
+layout activity_welcome
 layout item_incident

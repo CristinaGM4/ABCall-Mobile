@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asunto:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputAsunto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Proporcione un título del incidente."
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción el caso:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Proporcione una descripción del incidente."
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:gravity="top"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnCrearIncidente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear incidente"
+            android:backgroundTint="#A7D88C"
+            android:textColor="#000000" />
+    </LinearLayout>
+</ScrollView>

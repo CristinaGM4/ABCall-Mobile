@@ -9,8 +9,9 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val incident = intent.getSerializableExtra("incident") as Incidente
+        val incident = intent.getSerializableExtra("incident") as? Incidente
 
+        if (incident != null) {
         findViewById<TextView>(R.id.titleText).text = incident.titulo
         findViewById<TextView>(R.id.estadoText).text = "Estado: ${incident.estado}"
         findViewById<TextView>(R.id.fechaText).text = "Fecha: ${incident.fecha}"
@@ -18,5 +19,7 @@ class DetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.clienteText).text = "Cliente: ${incident.cliente}"
         findViewById<TextView>(R.id.descripcionText).text = incident.descripcion
         findViewById<TextView>(R.id.gestionText).text = "Gestión: ${incident.gestion}"
+
+        }
     }
 }

@@ -2914,6 +2914,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable headset
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3104,6 +3105,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCrearIncidente
+id btnEmpezar
+id btnNuevoIncidente
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3215,6 +3219,7 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id gridClientes
 id group_divider
 id grouping
 id groups
@@ -3234,6 +3239,8 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputAsunto
+id inputDescripcion
 id invisible
 id inward
 id is_pooling_container_tag
@@ -3624,8 +3631,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_client_selection
+layout activity_create_incident
 layout activity_detail
 layout activity_main
+layout activity_welcome
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

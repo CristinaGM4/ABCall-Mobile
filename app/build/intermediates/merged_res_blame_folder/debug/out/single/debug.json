@@ -1,14 +1,34 @@
 [
     {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_activity_welcome.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_item_incident.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\item_incident.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\activity_detail.xml"
+    },
+    {
         "merged": "com.example.abcallmobile.app-merged_res-29:/layout_activity_main.xml.flat",
         "source": "com.example.abcallmobile.app-main-31:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.abcallmobile.app-merged_res-29:/layout_item_incident.xml.flat",
-        "source": "com.example.abcallmobile.app-main-31:/layout/item_incident.xml"
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\drawable_headset.png.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\drawable\\headset.png"
     },
     {
-        "merged": "com.example.abcallmobile.app-merged_res-29:/layout_activity_detail.xml.flat",
-        "source": "com.example.abcallmobile.app-main-31:/layout/activity_detail.xml"
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_activity_create_incident.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\activity_create_incident.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-29:\\layout_activity_client_selection.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-31:\\layout\\activity_client_selection.xml"
     }
 ]
