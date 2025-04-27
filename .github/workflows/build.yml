@@ -1,10 +1,8 @@
-name: Build and Release APK
+name: Build, Test and Release APK
 
 on:
   push:
     branches:
-      - develop
-      - release
       - main
   pull_request:
     branches:
@@ -17,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up JDK 17
@@ -29,14 +27,23 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
-      - name: Build APK (Debug)
-        run: ./gradlew assembleDebug
-
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Upload APK (Debug)
+      - name: Build APK (Debug)
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Release APK - ${{ github.run_number }}"
+          tag_name: "v${{ github.run_number }}"
+          files: app/build/outputs/apk/debug/app-debug.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
