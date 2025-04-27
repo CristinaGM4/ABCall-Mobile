@@ -3,6 +3,8 @@ name: Build, Test and Release APK
 on:
   push:
     branches:
+      - develop
+      - release
       - main
   pull_request:
     branches:
@@ -15,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up JDK 17
@@ -27,23 +29,44 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
+      - name: Build APK
+        run: ./gradlew assembleRelease
+
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
-
-      - name: Build APK (Debug)
-        run: ./gradlew assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: app-release
+          path: app/build/outputs/apk/release/app-release.apk
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Fetch tags
+        run: git fetch --tags
+
+      - name: Determine next version
+        id: version
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0 || echo "v0")
+          echo "Latest tag: $latest_tag"
+          number=${latest_tag#v}
+          next=$((number + 1))
+          echo "next_version=v$next" >> $GITHUB_ENV
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          name: "Release APK - ${{ github.run_number }}"
-          tag_name: "v${{ github.run_number }}"
-          files: app/build/outputs/apk/debug/app-debug.apk
+          tag_name: ${{ env.next_version }}
+          name: Release ${{ env.next_version }}
+          files: app/build/outputs/apk/release/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
