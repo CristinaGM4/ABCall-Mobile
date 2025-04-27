@@ -2,12 +2,19 @@ name: Build and Release APK
 
 on:
   push:
-    branches: [release]
+    branches:
+      - develop
+      - release
+      - main
   pull_request:
-    branches: [release]
+    branches:
+      - develop
+      - release
+      - main
 
 jobs:
   build:
+    name: Build APK
     runs-on: ubuntu-latest
 
     steps:
@@ -20,22 +27,17 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Grant permission to gradlew
+      - name: Grant execute permission for Gradlew
         run: chmod +x ./gradlew
 
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Generate code coverage report
-        run: ./gradlew jacocoTestReport
+      - name: Build APK
+        run: ./gradlew assembleDebug
 
-      - name: Build release APK
-        run: ./gradlew assembleRelease
-
-      - name: Upload APK to GitHub Release
-        uses: ncipollo/release-action@v1
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
         with:
-          artifacts: app/build/outputs/apk/release/app-release.apk
-          tag: v${{ github.run_number }}
-          name: Release ${{ github.run_number }}
-          body: "Versión automática con pruebas + build APK"
+          name: app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
