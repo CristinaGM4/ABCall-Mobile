@@ -29,14 +29,14 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
-      - name: Build APK
-        run: ./gradlew assembleRelease
+      - name: Build APK (Debug)
+        run: ./gradlew assembleDebug
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Upload APK
+      - name: Upload APK (Debug)
         uses: actions/upload-artifact@v3
         with:
-          name: app-release
-          path: app/build/outputs/apk/release/app-release.apk
+          name: app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
