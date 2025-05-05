@@ -12,14 +12,12 @@ class DetailActivity : AppCompatActivity() {
         val incident = intent.getSerializableExtra("incident") as? Incidente
 
         if (incident != null) {
-        findViewById<TextView>(R.id.titleText).text = incident.titulo
-        findViewById<TextView>(R.id.estadoText).text = "Estado: ${incident.estado}"
-        findViewById<TextView>(R.id.fechaText).text = "Fecha: ${incident.fecha}"
-        findViewById<TextView>(R.id.empresaText).text = "Empresa: ${incident.empresa}"
-        findViewById<TextView>(R.id.clienteText).text = "Cliente: ${incident.cliente}"
-        findViewById<TextView>(R.id.descripcionText).text = incident.descripcion
-        findViewById<TextView>(R.id.gestionText).text = "Gestión: ${incident.gestion}"
-
+            findViewById<TextView>(R.id.descripcionText).text = "Descripción: ${incident.descripcion}"
+            findViewById<TextView>(R.id.estadoText).text = "Estado: ${incident.estado}"
+            findViewById<TextView>(R.id.fechaText).text = "Fecha: ${incident.fechaCreacion}"
+            findViewById<TextView>(R.id.clienteText).text = "Cliente: ${incident.numDocumentoCliente}"
+            findViewById<TextView>(R.id.usuarioText).text = "Usuario: ${incident.numDocumentoUsuario}"
+            findViewById<TextView>(R.id.solucionadoText).text = "¿Solucionado?: ${incident.solucionado}"
         }
     }
 }

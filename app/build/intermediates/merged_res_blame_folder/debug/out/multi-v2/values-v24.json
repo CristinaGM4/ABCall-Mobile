@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.abcallmobile.app-mergeDebugResources-27:/values-v24/values-v24.xml",
+            "outputFile": "com.example.abcallmobile.app-mergeDebugResources-31:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Propietario\\.gradle\\caches\\8.10\\transforms\\9e29c3962bcaea288f325fcdfbc1bd9c\\transformed\\material-1.9.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Propietario\\.gradle\\caches\\8.10\\transforms\\dd09262c8748245ee35ee296921c0ab8\\transformed\\material-1.11.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.abcallmobile">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:label="ABCallMobile"
         android:icon="@android:drawable/star_on"
@@ -31,6 +34,10 @@
 
         <activity android:name=".CreateIncidentActivity"
             android:exported="true" />
+
+        <activity android:name=".FAQActivity" />
+
+        <activity android:name=".ChatbotActivity" />
 
     </application>
 
