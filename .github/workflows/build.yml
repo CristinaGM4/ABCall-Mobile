@@ -41,10 +41,10 @@ jobs:
           name: app-release
           path: app/build/outputs/apk/release/app-release.apk
 
-  release:
+   release:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/release' || github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
@@ -70,3 +70,5 @@ jobs:
           files: app/build/outputs/apk/release/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          
