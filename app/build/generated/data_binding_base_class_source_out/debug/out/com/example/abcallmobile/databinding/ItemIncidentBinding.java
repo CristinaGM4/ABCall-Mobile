@@ -23,12 +23,16 @@ public final class ItemIncidentBinding implements ViewBinding {
   public final TextView itemEstado;
 
   @NonNull
+  public final TextView itemFecha;
+
+  @NonNull
   public final TextView itemTitle;
 
   private ItemIncidentBinding(@NonNull CardView rootView, @NonNull TextView itemEstado,
-      @NonNull TextView itemTitle) {
+      @NonNull TextView itemFecha, @NonNull TextView itemTitle) {
     this.rootView = rootView;
     this.itemEstado = itemEstado;
+    this.itemFecha = itemFecha;
     this.itemTitle = itemTitle;
   }
 
@@ -65,13 +69,19 @@ public final class ItemIncidentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.itemFecha;
+      TextView itemFecha = ViewBindings.findChildViewById(rootView, id);
+      if (itemFecha == null) {
+        break missingId;
+      }
+
       id = R.id.itemTitle;
       TextView itemTitle = ViewBindings.findChildViewById(rootView, id);
       if (itemTitle == null) {
         break missingId;
       }
 
-      return new ItemIncidentBinding((CardView) rootView, itemEstado, itemTitle);
+      return new ItemIncidentBinding((CardView) rootView, itemEstado, itemFecha, itemTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.abcallmobile.app-mergeDebugResources-27:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.example.abcallmobile.app-mergeDebugResources-31:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Propietario\\.gradle\\caches\\8.10\\transforms\\9e29c3962bcaea288f325fcdfbc1bd9c\\transformed\\material-1.9.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\Propietario\\.gradle\\caches\\8.10\\transforms\\dd09262c8748245ee35ee296921c0ab8\\transformed\\material-1.11.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "76",
-                        "endOffsets": "127"
+                        "endColumns": "64",
+                        "endOffsets": "115"
                     }
                 }
             ]

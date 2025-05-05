@@ -1,25 +1,34 @@
 R_DEF: Internal format may change without notice
 local
 drawable headset
+id btnChatbot
 id btnCrearIncidente
 id btnEmpezar
+id btnEnviar
+id btnFAQ
 id btnNuevoIncidente
+id chatLog
 id clienteText
 id descripcionText
-id empresaText
 id estadoText
+id faq_list
+id faq_title
 id fechaText
-id gestionText
 id gridClientes
 id inputAsunto
 id inputDescripcion
+id inputMensaje
 id itemEstado
+id itemFecha
 id itemTitle
 id recyclerView
-id titleText
+id solucionadoText
+id usuarioText
+layout activity_chatbot
 layout activity_client_selection
 layout activity_create_incident
 layout activity_detail
+layout activity_faq
 layout activity_main
 layout activity_welcome
 layout item_incident
