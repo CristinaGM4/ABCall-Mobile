@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.abcallmobile.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,14 +22,23 @@ public final class ActivityMainBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
+  public final FloatingActionButton btnChatbot;
+
+  @NonNull
+  public final Button btnFAQ;
+
+  @NonNull
   public final Button btnNuevoIncidente;
 
   @NonNull
   public final RecyclerView recyclerView;
 
-  private ActivityMainBinding(@NonNull RelativeLayout rootView, @NonNull Button btnNuevoIncidente,
-      @NonNull RecyclerView recyclerView) {
+  private ActivityMainBinding(@NonNull RelativeLayout rootView,
+      @NonNull FloatingActionButton btnChatbot, @NonNull Button btnFAQ,
+      @NonNull Button btnNuevoIncidente, @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
+    this.btnChatbot = btnChatbot;
+    this.btnFAQ = btnFAQ;
     this.btnNuevoIncidente = btnNuevoIncidente;
     this.recyclerView = recyclerView;
   }
@@ -60,6 +70,18 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnChatbot;
+      FloatingActionButton btnChatbot = ViewBindings.findChildViewById(rootView, id);
+      if (btnChatbot == null) {
+        break missingId;
+      }
+
+      id = R.id.btnFAQ;
+      Button btnFAQ = ViewBindings.findChildViewById(rootView, id);
+      if (btnFAQ == null) {
+        break missingId;
+      }
+
       id = R.id.btnNuevoIncidente;
       Button btnNuevoIncidente = ViewBindings.findChildViewById(rootView, id);
       if (btnNuevoIncidente == null) {
@@ -72,7 +94,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((RelativeLayout) rootView, btnNuevoIncidente, recyclerView);
+      return new ActivityMainBinding((RelativeLayout) rootView, btnChatbot, btnFAQ,
+          btnNuevoIncidente, recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

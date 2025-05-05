@@ -26,32 +26,27 @@ public final class ActivityDetailBinding implements ViewBinding {
   public final TextView descripcionText;
 
   @NonNull
-  public final TextView empresaText;
-
-  @NonNull
   public final TextView estadoText;
 
   @NonNull
   public final TextView fechaText;
 
   @NonNull
-  public final TextView gestionText;
+  public final TextView solucionadoText;
 
   @NonNull
-  public final TextView titleText;
+  public final TextView usuarioText;
 
   private ActivityDetailBinding(@NonNull ScrollView rootView, @NonNull TextView clienteText,
-      @NonNull TextView descripcionText, @NonNull TextView empresaText,
-      @NonNull TextView estadoText, @NonNull TextView fechaText, @NonNull TextView gestionText,
-      @NonNull TextView titleText) {
+      @NonNull TextView descripcionText, @NonNull TextView estadoText, @NonNull TextView fechaText,
+      @NonNull TextView solucionadoText, @NonNull TextView usuarioText) {
     this.rootView = rootView;
     this.clienteText = clienteText;
     this.descripcionText = descripcionText;
-    this.empresaText = empresaText;
     this.estadoText = estadoText;
     this.fechaText = fechaText;
-    this.gestionText = gestionText;
-    this.titleText = titleText;
+    this.solucionadoText = solucionadoText;
+    this.usuarioText = usuarioText;
   }
 
   @Override
@@ -93,12 +88,6 @@ public final class ActivityDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.empresaText;
-      TextView empresaText = ViewBindings.findChildViewById(rootView, id);
-      if (empresaText == null) {
-        break missingId;
-      }
-
       id = R.id.estadoText;
       TextView estadoText = ViewBindings.findChildViewById(rootView, id);
       if (estadoText == null) {
@@ -111,20 +100,20 @@ public final class ActivityDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.gestionText;
-      TextView gestionText = ViewBindings.findChildViewById(rootView, id);
-      if (gestionText == null) {
+      id = R.id.solucionadoText;
+      TextView solucionadoText = ViewBindings.findChildViewById(rootView, id);
+      if (solucionadoText == null) {
         break missingId;
       }
 
-      id = R.id.titleText;
-      TextView titleText = ViewBindings.findChildViewById(rootView, id);
-      if (titleText == null) {
+      id = R.id.usuarioText;
+      TextView usuarioText = ViewBindings.findChildViewById(rootView, id);
+      if (usuarioText == null) {
         break missingId;
       }
 
       return new ActivityDetailBinding((ScrollView) rootView, clienteText, descripcionText,
-          empresaText, estadoText, fechaText, gestionText, titleText);
+          estadoText, fechaText, solucionadoText, usuarioText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

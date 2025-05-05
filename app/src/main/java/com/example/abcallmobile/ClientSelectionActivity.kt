@@ -23,6 +23,11 @@ class ClientSelectionActivity : AppCompatActivity() {
         gridView.adapter = adapter
 
         gridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            editor.putString("clienteNombre", clientes[position])
+            editor.apply()
+
             val intent = Intent(this, MainActivity::class.java) // ← Cambia si tu vista principal tiene otro nombre
             intent.putExtra("clienteSeleccionado", clientes[position])
             startActivity(intent)
