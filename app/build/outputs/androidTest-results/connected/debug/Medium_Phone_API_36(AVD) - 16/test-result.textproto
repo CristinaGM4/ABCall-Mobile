@@ -1,0 +1,15 @@
+# 2025-05-05T04:01:16.381Z:
+test_status: ABORTED
+platform_error {
+  errors {
+    summary {
+      namespace {
+        namespace: "com.google.testing.platform"
+      }
+      error_code: 1001
+      error_name: "UTP_CORE_FAILED"
+      error_classification: "INFRA"
+      stack_trace: "java.lang.NullPointerException\r\n\tat com.google.testing.platform.executor.SingleDeviceExecutor$execute$3.invoke(SingleDeviceExecutor.kt:101)\r\n\tat com.google.testing.platform.executor.SingleDeviceExecutor$execute$3.invoke(SingleDeviceExecutor.kt:100)\r\n\tat com.google.testing.platform.result.TestResultListenerManager.afterTestSuite(TestResultListenerManager.kt:139)\r\n\tat com.google.testing.platform.executor.SingleDeviceExecutor.execute(SingleDeviceExecutor.kt:115)\r\n\tat com.google.testing.platform.RunnerImpl.run(RunnerImpl.kt:117)\r\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$5.invoke(NonInteractiveServerStrategy.kt:95)\r\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$5.invoke(NonInteractiveServerStrategy.kt:94)\r\n\tat com.google.testing.platform.core.telemetry.common.noop.NoopDiagnosticsScope.recordEvent(NoopDiagnosticsScope.kt:35)\r\n\tat com.google.testing.platform.core.telemetry.TelemetryKt.recordEvent(Telemetry.kt:66)\r\n\tat com.google.testing.platform.server.strategy.NonInteractiveServerStrategy.run(NonInteractiveServerStrategy.kt:94)\r\n\tat com.google.testing.platform.main.MainKt$main$4.invokeSuspend(Main.kt:75)\r\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\r\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\r\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:279)\r\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\r\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\r\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\r\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\r\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\r\n\tat com.google.testing.platform.main.MainKt.main(Main.kt:73)\r\n\tat com.google.testing.platform.main.MainKt.main$default(Main.kt:35)\r\n\tat com.google.testing.platform.main.MainKt.main(Main.kt)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\r\n\tat com.google.testing.platform.launcher.Launcher.main(Launcher.java:149)\r\n"
+    }
+  }
+}

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-47:12
 MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\Propietario\.gradle\caches\8.10\transforms\128315880d1fccf1c54c29ea138a888a\transformed\jetified-viewbinding-8.1.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Propietario\.gradle\caches\8.10\transforms\7c46f48015c3f5155cabb96cbcfa3d7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -62,8 +62,8 @@ ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main
 	android:name
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-42:19
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-42:19
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-45:19
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-45:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Propietario\.gradle\caches\8.10\transforms\7c46f48015c3f5155cabb96cbcfa3d7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -150,6 +150,10 @@ activity#com.example.abcallmobile.ChatbotActivity
 ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:9-53
 	android:name
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:19-50
+activity#com.example.abcallmobile.SolucionesActivity
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:42:9-56
+	android:name
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:42:19-53
 uses-sdk
 INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml

@@ -1,0 +1,6 @@
+com.example.abcallmobile.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\Propietario\.gradle\caches\8.10\transforms\d6fefc85ad446ec45b60d8d9a4a1c7f5\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.abcallmobile.test.app-jetified-core-1.5.0-1 C:\Users\Propietario\.gradle\caches\8.10\transforms\d740bd6e9dc047c26b3dcc2ab315e7bd\transformed\jetified-core-1.5.0\res
+com.example.abcallmobile.test.app-androidTest-2 C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\build\generated\res\resValues\androidTest\debug
+com.example.abcallmobile.test.app-mergeDebugAndroidTestResources-3 C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.abcallmobile.test.app-mergeDebugAndroidTestResources-4 C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.abcallmobile.test.app-merged_res-5 C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\build\intermediates\merged_res\debugAndroidTest

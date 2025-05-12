@@ -39,6 +39,9 @@
 
         <activity android:name=".ChatbotActivity" />
 
+        <activity android:name=".SolucionesActivity" />
+
+
     </application>
 
 </manifest>

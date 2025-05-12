@@ -2976,6 +2976,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable circle_green
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3071,6 +3072,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sugerencia_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3156,6 +3158,7 @@ id antiClockwise
 id anticipate
 id arc
 id asConfigured
+id asunto_incidente
 id async
 id auto
 id autoComplete
@@ -3172,12 +3175,14 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAceptar
 id btnChatbot
 id btnCrearIncidente
 id btnEmpezar
 id btnEnviar
 id btnFAQ
 id btnNuevoIncidente
+id btnVerSoluciones
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3307,6 +3312,7 @@ id ignore
 id ignoreRequest
 id image
 id immediateStop
+id incidente_id
 id included
 id indeterminate
 id info
@@ -3446,6 +3452,7 @@ id pin
 id pooling_container_listener_holder_tag
 id position
 id postLayout
+id pregunta_sugerencias
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3557,6 +3564,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id titulo
 id toggle
 id top
 id topPanel
@@ -3713,6 +3721,7 @@ layout activity_create_incident
 layout activity_detail
 layout activity_faq
 layout activity_main
+layout activity_soluciones
 layout activity_welcome
 layout custom_dialog
 layout design_bottom_navigation_item
