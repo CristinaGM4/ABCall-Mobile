@@ -53,6 +53,7 @@
             android:exported="true" />
         <activity android:name="com.example.abcallmobile.FAQActivity" />
         <activity android:name="com.example.abcallmobile.ChatbotActivity" />
+        <activity android:name="com.example.abcallmobile.SolucionesActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

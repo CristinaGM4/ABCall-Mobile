@@ -74,6 +74,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnVerSoluciones = findViewById<Button>(R.id.btnVerSoluciones)
+
+        btnVerSoluciones.setOnClickListener {
+            val intent = Intent(this, SolucionesActivity::class.java)
+            // Puedes enviar datos si quieres:
+            intent.putExtra("incidenteId", "12345")
+            intent.putExtra("asunto", "Problema de red")
+            startActivity(intent)
+        }
+
         val btnNuevo = findViewById<Button>(R.id.btnNuevoIncidente)
         btnNuevo.setOnClickListener {
             val intent = Intent(this, CreateIncidentActivity::class.java)

@@ -33,6 +33,17 @@
         android:textStyle="bold"
         android:layout_margin="8dp"/>
 
+    <Button
+        android:id="@+id/btnVerSoluciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sugerencias"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnChatbot"
         android:layout_width="wrap_content"

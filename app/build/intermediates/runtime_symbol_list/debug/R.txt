@@ -2975,6 +2975,7 @@ int drawable btn_radio_off_mtrl 0x7f07007d
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f07007e
 int drawable btn_radio_on_mtrl 0x7f07007f
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070080
+int drawable circle_green 0x7f0700e3
 int drawable design_fab_background 0x7f070081
 int drawable design_ic_visibility 0x7f070082
 int drawable design_ic_visibility_off 0x7f070083
@@ -3070,6 +3071,7 @@ int drawable notification_template_icon_bg 0x7f0700dc
 int drawable notification_template_icon_low_bg 0x7f0700dd
 int drawable notification_tile_bg 0x7f0700de
 int drawable notify_panel_notification_icon_bg 0x7f0700df
+int drawable sugerencia_background 0x7f0700e4
 int drawable test_level_drawable 0x7f0700e0
 int drawable tooltip_frame_dark 0x7f0700e1
 int drawable tooltip_frame_light 0x7f0700e2
@@ -3155,6 +3157,7 @@ int id antiClockwise 0x7f08004e
 int id anticipate 0x7f08004f
 int id arc 0x7f080050
 int id asConfigured 0x7f080051
+int id asunto_incidente 0x7f080207
 int id async 0x7f080052
 int id auto 0x7f080053
 int id autoComplete 0x7f080054
@@ -3171,12 +3174,14 @@ int id bounce 0x7f08005e
 int id bounceBoth 0x7f08005f
 int id bounceEnd 0x7f080060
 int id bounceStart 0x7f080061
+int id btnAceptar 0x7f080208
 int id btnChatbot 0x7f080062
 int id btnCrearIncidente 0x7f080063
 int id btnEmpezar 0x7f080064
 int id btnEnviar 0x7f080065
 int id btnFAQ 0x7f080066
 int id btnNuevoIncidente 0x7f080067
+int id btnVerSoluciones 0x7f080209
 int id buttonPanel 0x7f080068
 int id cache_measures 0x7f080069
 int id callMeasure 0x7f08006a
@@ -3306,6 +3311,7 @@ int id ignore 0x7f0800e5
 int id ignoreRequest 0x7f0800e6
 int id image 0x7f0800e7
 int id immediateStop 0x7f0800e8
+int id incidente_id 0x7f08020a
 int id included 0x7f0800e9
 int id indeterminate 0x7f0800ea
 int id info 0x7f0800eb
@@ -3445,6 +3451,7 @@ int id pin 0x7f080170
 int id pooling_container_listener_holder_tag 0x7f080171
 int id position 0x7f080172
 int id postLayout 0x7f080173
+int id pregunta_sugerencias 0x7f08020b
 int id pressed 0x7f080174
 int id progress_circular 0x7f080175
 int id progress_horizontal 0x7f080176
@@ -3556,6 +3563,7 @@ int id time 0x7f0801df
 int id title 0x7f0801e0
 int id titleDividerNoCustom 0x7f0801e1
 int id title_template 0x7f0801e2
+int id titulo 0x7f08020c
 int id toggle 0x7f0801e3
 int id top 0x7f0801e4
 int id topPanel 0x7f0801e5
@@ -3712,6 +3720,7 @@ int layout activity_create_incident 0x7f0b001e
 int layout activity_detail 0x7f0b001f
 int layout activity_faq 0x7f0b0020
 int layout activity_main 0x7f0b0021
+int layout activity_soluciones 0x7f0b0071
 int layout activity_welcome 0x7f0b0022
 int layout custom_dialog 0x7f0b0023
 int layout design_bottom_navigation_item 0x7f0b0024

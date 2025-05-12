@@ -1,12 +1,17 @@
 R_DEF: Internal format may change without notice
 local
+drawable circle_green
 drawable headset
+drawable sugerencia_background
+id asunto_incidente
+id btnAceptar
 id btnChatbot
 id btnCrearIncidente
 id btnEmpezar
 id btnEnviar
 id btnFAQ
 id btnNuevoIncidente
+id btnVerSoluciones
 id chatLog
 id clienteText
 id descripcionText
@@ -15,14 +20,17 @@ id faq_list
 id faq_title
 id fechaText
 id gridClientes
+id incidente_id
 id inputAsunto
 id inputDescripcion
 id inputMensaje
 id itemEstado
 id itemFecha
 id itemTitle
+id pregunta_sugerencias
 id recyclerView
 id solucionadoText
+id titulo
 id usuarioText
 layout activity_chatbot
 layout activity_client_selection
@@ -30,5 +38,6 @@ layout activity_create_incident
 layout activity_detail
 layout activity_faq
 layout activity_main
+layout activity_soluciones
 layout activity_welcome
 layout item_incident

@@ -31,15 +31,20 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnNuevoIncidente;
 
   @NonNull
+  public final Button btnVerSoluciones;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
   private ActivityMainBinding(@NonNull RelativeLayout rootView,
       @NonNull FloatingActionButton btnChatbot, @NonNull Button btnFAQ,
-      @NonNull Button btnNuevoIncidente, @NonNull RecyclerView recyclerView) {
+      @NonNull Button btnNuevoIncidente, @NonNull Button btnVerSoluciones,
+      @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
     this.btnChatbot = btnChatbot;
     this.btnFAQ = btnFAQ;
     this.btnNuevoIncidente = btnNuevoIncidente;
+    this.btnVerSoluciones = btnVerSoluciones;
     this.recyclerView = recyclerView;
   }
 
@@ -88,6 +93,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnVerSoluciones;
+      Button btnVerSoluciones = ViewBindings.findChildViewById(rootView, id);
+      if (btnVerSoluciones == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerView;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
@@ -95,7 +106,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((RelativeLayout) rootView, btnChatbot, btnFAQ,
-          btnNuevoIncidente, recyclerView);
+          btnNuevoIncidente, btnVerSoluciones, recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite tests="0" failures="0" errors="0" skipped="0" time="1.746417676352E9" timestamp="2025-05-05T04:01:16" hostname="localhost">
+  <properties>
+    <property name="device" value="Medium_Phone_API_36(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <system-err>Unknown platform error occurred when running the UTP test suite. Please check logs for details.
+java.lang.NullPointerException
+	at com.google.testing.platform.executor.SingleDeviceExecutor$execute$3.invoke(SingleDeviceExecutor.kt:101)
+	at com.google.testing.platform.executor.SingleDeviceExecutor$execute$3.invoke(SingleDeviceExecutor.kt:100)
+	at com.google.testing.platform.result.TestResultListenerManager.afterTestSuite(TestResultListenerManager.kt:139)
+	at com.google.testing.platform.executor.SingleDeviceExecutor.execute(SingleDeviceExecutor.kt:115)
+	at com.google.testing.platform.RunnerImpl.run(RunnerImpl.kt:117)
+	at com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$5.invoke(NonInteractiveServerStrategy.kt:95)
+	at com.google.testing.platform.server.strategy.NonInteractiveServerStrategy$run$5.invoke(NonInteractiveServerStrategy.kt:94)
+	at com.google.testing.platform.core.telemetry.common.noop.NoopDiagnosticsScope.recordEvent(NoopDiagnosticsScope.kt:35)
+	at com.google.testing.platform.core.telemetry.TelemetryKt.recordEvent(Telemetry.kt:66)
+	at com.google.testing.platform.server.strategy.NonInteractiveServerStrategy.run(NonInteractiveServerStrategy.kt:94)
+	at com.google.testing.platform.main.MainKt$main$4.invokeSuspend(Main.kt:75)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:279)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at com.google.testing.platform.main.MainKt.main(Main.kt:73)
+	at com.google.testing.platform.main.MainKt.main$default(Main.kt:35)
+	at com.google.testing.platform.main.MainKt.main(Main.kt)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at com.google.testing.platform.launcher.Launcher.main(Launcher.java:149)
+
+</system-err>
+</testsuite>
