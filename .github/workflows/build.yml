@@ -29,8 +29,10 @@ jobs:
       - name: Build APK
         run: ./gradlew assembleRelease
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: APK-ABCall
-          path: app/build/outputs/apk/release/app-release.apk
+      - name: Upload APK (debug y release si existen)
+  	uses: actions/upload-artifact@v4
+  	with:
+    	name: app-artifacts
+    	path: |
+      	app/build/outputs/apk/debug/app-debug.apk
+      	app/build/outputs/apk/release/app-release.apk
