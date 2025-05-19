@@ -1,97 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sugerencias de soluciones"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/incidente_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Incidente: 12345"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:id="@+id/asunto_incidente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asunto: Problema de red"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/pregunta_sugerencias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Por qué no?"
-        android:textSize="16sp"
-        android:textColor="#2E7D32"
-        android:textStyle="bold"
-        android:layout_marginBottom="12dp"/>
-
-    <LinearLayout
+    <!-- Barra superior personalizada -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_abcall"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/sugerencia_background"
-        android:padding="12dp"
-        android:layout_marginBottom="8dp">
+        android:layout_height="wrap_content" />
 
-        <View
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/circle_green"
-            android:layout_marginEnd="12dp"
-            android:layout_gravity="center_vertical"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Verificar la conexión del cable de red"
-            android:textSize="16sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <!-- Contenido desplazable -->
+    <ScrollView
+        android:id="@+id/scrollSugerencias"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/sugerencia_background"
-        android:padding="12dp"
-        android:layout_marginBottom="24dp">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnAceptar"
+        android:padding="24dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="@string/desc_lista_sugerencias">
 
-        <View
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/circle_green"
-            android:layout_marginEnd="12dp"
-            android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:id="@+id/contenedorSugerencias"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Restablecer la configuración de red"
-            android:textSize="16sp"/>
-    </LinearLayout>
+            <TextView
+                android:text="@string/sugerencias_titulo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
 
+            <TextView
+                android:id="@+id/txtIdIncidente"
+                android:text="@string/label_incidente"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón aceptar fijo abajo -->
     <Button
         android:id="@+id/btnAceptar"
+        style="@style/CustomBotonVerde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aceptar"
-        android:backgroundTint="#2E7D32"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center_horizontal"/>
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/aceptar" />
+</RelativeLayout>

@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim blink
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -2968,6 +2969,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable borde_sugerencia
+drawable boton_borde_verde
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2990,8 +2993,10 @@ drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_chatbot
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_config
 drawable ic_keyboard_black_24dp
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
@@ -3000,7 +3005,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_salir
 drawable ic_search_black_24
+drawable logo_abcall
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3158,7 +3165,6 @@ id antiClockwise
 id anticipate
 id arc
 id asConfigured
-id asunto_incidente
 id async
 id auto
 id autoComplete
@@ -3171,18 +3177,23 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_nav
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
 id btnAceptar
 id btnChatbot
+id btnConfiguracion
+id btnConfirmarLectura
+id btnContinuar
 id btnCrearIncidente
 id btnEmpezar
 id btnEnviar
 id btnFAQ
 id btnNuevoIncidente
-id btnVerSoluciones
+id btnSalir
+id btnVerSugerencias
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3212,6 +3223,14 @@ id compress
 id confirm_button
 id constraint
 id container
+id contenedorCrear
+id contenedorDatosUsuario
+id contenedorScroll
+id contenedorSugerencias
+id contenidoChat
+id contenidoCliente
+id contenidoConfirmacion
+id contenidoInicio
 id content
 id contentPanel
 id contiguous
@@ -3260,6 +3279,7 @@ id easeOut
 id east
 id edge
 id edit_query
+id edtNumeroDocumento
 id elastic
 id embed
 id end
@@ -3312,7 +3332,6 @@ id ignore
 id ignoreRequest
 id image
 id immediateStop
-id incidente_id
 id included
 id indeterminate
 id info
@@ -3323,14 +3342,14 @@ id invisible
 id inward
 id is_pooling_container_tag
 id italic
-id itemEstado
 id itemFecha
-id itemTitle
+id itemId
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutPrincipal
 id left
 id leftToRight
 id legacy
@@ -3452,14 +3471,14 @@ id pin
 id pooling_container_listener_holder_tag
 id position
 id postLayout
-id pregunta_sugerencias
 id pressed
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recyclerView
+id recyclerClientes
+id recyclerIncidentes
 id report_drawn
 id reverseSawtooth
 id right
@@ -3474,8 +3493,10 @@ id sawtooth
 id scale
 id screen
 id scroll
+id scrollConfiguracion
 id scrollIndicatorDown
 id scrollIndicatorUp
+id scrollSugerencias
 id scrollView
 id scrollable
 id search_badge
@@ -3505,10 +3526,10 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id solucionadoText
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerTipoDoc
 id spline
 id split_action_bar
 id spread
@@ -3530,6 +3551,8 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switchAlertas
+id switchEstado
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3560,12 +3583,13 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textoConfirmacion
 id time
 id title
 id titleDividerNoCustom
 id title_template
-id titulo
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3577,6 +3601,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtClienteSeleccionado
+id txtDocumentoCliente
+id txtIdIncidente
+id txtNombreCliente
 id unchecked
 id uniform
 id unlabeled
@@ -3717,12 +3745,16 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chatbot
 layout activity_client_selection
+layout activity_configuracion
+layout activity_confirmacion_lectura
 layout activity_create_incident
 layout activity_detail
 layout activity_faq
-layout activity_main
+layout activity_identificacion_usuario
+layout activity_incident
 layout activity_soluciones
 layout activity_welcome
+layout bottom_nav_bar
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3739,6 +3771,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_cliente
 layout item_incident
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3801,6 +3834,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout toolbar_abcall
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -3829,7 +3863,9 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string aceptar
 string androidx_startup
+string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
@@ -3837,6 +3873,7 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string btn_continuar
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -3848,14 +3885,18 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string desc_lista_sugerencias
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
+string hint_numero_documento
 string icon_content_description
 string item_view_role_description
+string label_cliente
+string label_incidente
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -3968,6 +4009,8 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string sugerencias_titulo
+string tipo_documento
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -4258,6 +4301,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style CustomBotonVerde
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
@@ -4491,6 +4535,7 @@ style TextAppearance_MaterialComponents_Tooltip
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style Theme_ABCallMobile
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -5237,3 +5282,4 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml network_security_config

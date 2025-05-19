@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.ABCallMobile" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#388E3C</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+</resources>

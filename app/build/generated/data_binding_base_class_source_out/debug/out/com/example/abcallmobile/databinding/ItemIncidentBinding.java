@@ -4,10 +4,10 @@ package com.example.abcallmobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.abcallmobile.R;
@@ -17,28 +17,24 @@ import java.lang.String;
 
 public final class ItemIncidentBinding implements ViewBinding {
   @NonNull
-  private final CardView rootView;
-
-  @NonNull
-  public final TextView itemEstado;
+  private final LinearLayout rootView;
 
   @NonNull
   public final TextView itemFecha;
 
   @NonNull
-  public final TextView itemTitle;
+  public final TextView itemId;
 
-  private ItemIncidentBinding(@NonNull CardView rootView, @NonNull TextView itemEstado,
-      @NonNull TextView itemFecha, @NonNull TextView itemTitle) {
+  private ItemIncidentBinding(@NonNull LinearLayout rootView, @NonNull TextView itemFecha,
+      @NonNull TextView itemId) {
     this.rootView = rootView;
-    this.itemEstado = itemEstado;
     this.itemFecha = itemFecha;
-    this.itemTitle = itemTitle;
+    this.itemId = itemId;
   }
 
   @Override
   @NonNull
-  public CardView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -63,25 +59,19 @@ public final class ItemIncidentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.itemEstado;
-      TextView itemEstado = ViewBindings.findChildViewById(rootView, id);
-      if (itemEstado == null) {
-        break missingId;
-      }
-
       id = R.id.itemFecha;
       TextView itemFecha = ViewBindings.findChildViewById(rootView, id);
       if (itemFecha == null) {
         break missingId;
       }
 
-      id = R.id.itemTitle;
-      TextView itemTitle = ViewBindings.findChildViewById(rootView, id);
-      if (itemTitle == null) {
+      id = R.id.itemId;
+      TextView itemId = ViewBindings.findChildViewById(rootView, id);
+      if (itemId == null) {
         break missingId;
       }
 
-      return new ItemIncidentBinding((CardView) rootView, itemEstado, itemFecha, itemTitle);
+      return new ItemIncidentBinding((LinearLayout) rootView, itemFecha, itemId);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

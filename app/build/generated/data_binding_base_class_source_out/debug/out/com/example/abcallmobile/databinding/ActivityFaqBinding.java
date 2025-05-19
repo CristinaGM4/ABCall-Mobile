@@ -4,8 +4,8 @@ package com.example.abcallmobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +18,10 @@ import java.lang.String;
 
 public final class ActivityFaqBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final BottomNavBarBinding bottomNav;
 
   @NonNull
   public final ListView faqList;
@@ -26,16 +29,22 @@ public final class ActivityFaqBinding implements ViewBinding {
   @NonNull
   public final TextView faqTitle;
 
-  private ActivityFaqBinding(@NonNull LinearLayout rootView, @NonNull ListView faqList,
-      @NonNull TextView faqTitle) {
+  @NonNull
+  public final ToolbarAbcallBinding toolbar;
+
+  private ActivityFaqBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavBarBinding bottomNav, @NonNull ListView faqList, @NonNull TextView faqTitle,
+      @NonNull ToolbarAbcallBinding toolbar) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
     this.faqList = faqList;
     this.faqTitle = faqTitle;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -60,6 +69,13 @@ public final class ActivityFaqBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_nav;
+      View bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+      BottomNavBarBinding binding_bottomNav = BottomNavBarBinding.bind(bottomNav);
+
       id = R.id.faq_list;
       ListView faqList = ViewBindings.findChildViewById(rootView, id);
       if (faqList == null) {
@@ -72,7 +88,15 @@ public final class ActivityFaqBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityFaqBinding((LinearLayout) rootView, faqList, faqTitle);
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      return new ActivityFaqBinding((RelativeLayout) rootView, binding_bottomNav, faqList, faqTitle,
+          binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

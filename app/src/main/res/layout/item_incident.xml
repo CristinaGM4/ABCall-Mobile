@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp">
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/itemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: 123"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/itemTitle"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Título del incidente"/>
-
-        <TextView
-            android:id="@+id/itemEstado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estado"
-            android:textColor="#666"/>
-
-        <TextView
-            android:id="@+id/itemFecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fecha"
-            android:textColor="#888888"
-            android:textSize="12sp"/>
-
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/itemFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-05-17"
+        android:textSize="14sp"
+        android:textColor="#666666" />
+</LinearLayout>

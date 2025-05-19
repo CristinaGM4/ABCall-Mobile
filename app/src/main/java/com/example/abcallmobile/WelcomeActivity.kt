@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_welcome)
 
         val btnEmpezar = findViewById<Button>(R.id.btnEmpezar)

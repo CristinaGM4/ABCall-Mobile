@@ -3,9 +3,9 @@ package com.example.abcallmobile
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 
-class ChatbotActivity : AppCompatActivity() {
+
+class ChatbotActivity : BaseActivity() {
 
     private lateinit var inputMensaje: EditText
     private lateinit var chatLog: TextView
@@ -55,39 +55,86 @@ class ChatbotActivity : AppCompatActivity() {
 
     private fun agregarMensaje(texto: String) {
         chatLog.append("\n\n$texto")
+        val prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+        val nombreUsuario = prefs.getString("nombreUsuario", null)
+        // Si el mensaje contiene la sugerencia de crear incidente, se activa animación
+        if (texto.contains("¿Deseas crear un incidente", ignoreCase = true)) {
+            val anim = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.blink)
+            btnCrear.startAnimation(anim)
+        }
+
     }
 
     private fun responderMensaje(mensaje: String): String {
+        val lower = mensaje.lowercase()
+
+        fun contienePalabraEsperada(palabras: List<String>): Boolean {
+            return palabras.any { it in lower || esSimilar(lower, it) }
+        }
+
         return when {
-            mensaje.contains("hola", ignoreCase = true) ||
-                    mensaje.contains("buenos días", ignoreCase = true) ||
-                    mensaje.contains("buenas", ignoreCase = true) ->
-                "¡Hola! 😊 Soy tu asistente virtual. ¿Cuál es tu nombre?"
+            contienePalabraEsperada(listOf("hola", "buenos días", "buenas", "hey", "necesito ayuda")) ->
+                "¡Hola! 😊 Soy tu asistente virtual. ¿En qué puedo ayudarte, me puedes decir tu nombre?"
 
-            mensaje.contains("me llamo", ignoreCase = true) ||
-                    mensaje.contains("soy", ignoreCase = true) ->
-                "Mucho gusto. ¿Podrías darme tu número de documento para validar tu usuario?"
+            lower.contains("me llamo") || lower.contains("mi nombre es") || lower.contains("soy") -> {
+                val nombre = when {
+                    "me llamo" in lower -> lower.substringAfter("me llamo").trim().split(" ")[0]
+                    "mi nombre es" in lower -> lower.substringAfter("mi nombre es").trim().split(" ")[0]
+                    "soy" in lower -> lower.substringAfter("soy").trim().split(" ")[0]
+                    else -> "usuario"
+                }.replaceFirstChar { it.uppercase() }
 
-            mensaje.contains("51287946") || mensaje.matches(Regex(".*\\d{6,10}.*")) ->
-                "Gracias. ¿En qué puedo ayudarte hoy?"
+                // Guardar en SharedPreferences
+                val prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+                prefs.edit().putString("nombreUsuario", nombre).apply()
 
-            mensaje.contains("no carga", ignoreCase = true) ||
-                    mensaje.contains("no abre", ignoreCase = true) ||
-                    mensaje.contains("página", ignoreCase = true) ->
-                "Lo siento 😓. Intenta lo siguiente:\n1. Verifica tu conexión a internet.\n2. Intenta cerrar y abrir la app.\n3. Si el problema persiste, crea un incidente."
+                return "Mucho gusto, $nombre. ¿Podrías darme tu número de documento para validar tu usuario?"
+            }
 
-            mensaje.contains("incidente", ignoreCase = true) ||
-                    mensaje.contains("crear", ignoreCase = true) ->
+            Regex(".*\\b\\d{6,10}\\b.*").matches(lower) ->
+                "Gracias. ¿Cuál es el problema que estás presentando?"
+
+            contienePalabraEsperada(listOf("no carga", "no abre", "página", "bloqueado", "error", "pagina lenta")) ->
+                "Lo siento 😓. Intenta lo siguiente:\n1. Verifica tu conexión a internet.\n2. Cierra y vuelve a abrir la app.\n3. Si el problema persiste, crea un incidente."
+
+            contienePalabraEsperada(listOf("internet", "sin conexión", "wifi", "se cayó")) ->
+                "¿Has probado reiniciar tu router? Si el problema continúa, puedes crear un incidente."
+
+            contienePalabraEsperada(listOf("factura", "cuenta", "recibo", "pago")) ->
+                "Puedes consultar tus facturas en el portal del cliente. ¿Necesitas el enlace?"
+
+            contienePalabraEsperada(listOf("crear", "incidente", "problema")) ->
                 "Puedes usar el botón de abajo para crear un incidente y te ayudaremos lo antes posible."
 
-            mensaje.contains("gracias", ignoreCase = true) ->
+            contienePalabraEsperada(listOf("gracias", "muchas gracias")) ->
                 "¡Con gusto! 😊 ¿Necesitas algo más?"
 
-            mensaje.contains("adiós", ignoreCase = true) ||
-                    mensaje.contains("hasta luego", ignoreCase = true) ->
+            contienePalabraEsperada(listOf("adiós", "hasta luego", "chao", "nos vemos")) ->
                 "¡Hasta pronto! 👋 No dudes en escribirme si necesitas algo más."
 
-            else -> "Mmm... aún estoy aprendiendo. ¿Podrías decirlo de otra forma?"
+            else -> "Lo siento, no entendí tu mensaje. ¿Deseas crear un incidente con esta descripción?"
         }
     }
+}
+
+fun levenshtein(a: String, b: String): Int {
+    val dp = Array(a.length + 1) { IntArray(b.length + 1) }
+    for (i in a.indices) dp[i + 1][0] = i + 1
+    for (j in b.indices) dp[0][j + 1] = j + 1
+
+    for (i in a.indices) {
+        for (j in b.indices) {
+            val cost = if (a[i] == b[j]) 0 else 1
+            dp[i + 1][j + 1] = minOf(
+                dp[i][j + 1] + 1,
+                dp[i + 1][j] + 1,
+                dp[i][j] + cost
+            )
+        }
+    }
+    return dp[a.length][b.length]
+}
+
+fun esSimilar(a: String, b: String, umbral: Int = 2): Boolean {
+    return levenshtein(a.lowercase(), b.lowercase()) <= umbral
 }

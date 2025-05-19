@@ -4,6 +4,8 @@ package com.example.abcallmobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -17,10 +19,19 @@ import java.lang.String;
 
 public final class ActivityDetailBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final BottomNavBarBinding bottomNav;
+
+  @NonNull
+  public final Button btnVerSugerencias;
 
   @NonNull
   public final TextView clienteText;
+
+  @NonNull
+  public final ScrollView contenedorScroll;
 
   @NonNull
   public final TextView descripcionText;
@@ -32,26 +43,31 @@ public final class ActivityDetailBinding implements ViewBinding {
   public final TextView fechaText;
 
   @NonNull
-  public final TextView solucionadoText;
+  public final ToolbarAbcallBinding toolbar;
 
   @NonNull
   public final TextView usuarioText;
 
-  private ActivityDetailBinding(@NonNull ScrollView rootView, @NonNull TextView clienteText,
+  private ActivityDetailBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavBarBinding bottomNav, @NonNull Button btnVerSugerencias,
+      @NonNull TextView clienteText, @NonNull ScrollView contenedorScroll,
       @NonNull TextView descripcionText, @NonNull TextView estadoText, @NonNull TextView fechaText,
-      @NonNull TextView solucionadoText, @NonNull TextView usuarioText) {
+      @NonNull ToolbarAbcallBinding toolbar, @NonNull TextView usuarioText) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
+    this.btnVerSugerencias = btnVerSugerencias;
     this.clienteText = clienteText;
+    this.contenedorScroll = contenedorScroll;
     this.descripcionText = descripcionText;
     this.estadoText = estadoText;
     this.fechaText = fechaText;
-    this.solucionadoText = solucionadoText;
+    this.toolbar = toolbar;
     this.usuarioText = usuarioText;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -76,9 +92,28 @@ public final class ActivityDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_nav;
+      View bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+      BottomNavBarBinding binding_bottomNav = BottomNavBarBinding.bind(bottomNav);
+
+      id = R.id.btnVerSugerencias;
+      Button btnVerSugerencias = ViewBindings.findChildViewById(rootView, id);
+      if (btnVerSugerencias == null) {
+        break missingId;
+      }
+
       id = R.id.clienteText;
       TextView clienteText = ViewBindings.findChildViewById(rootView, id);
       if (clienteText == null) {
+        break missingId;
+      }
+
+      id = R.id.contenedorScroll;
+      ScrollView contenedorScroll = ViewBindings.findChildViewById(rootView, id);
+      if (contenedorScroll == null) {
         break missingId;
       }
 
@@ -100,11 +135,12 @@ public final class ActivityDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.solucionadoText;
-      TextView solucionadoText = ViewBindings.findChildViewById(rootView, id);
-      if (solucionadoText == null) {
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
         break missingId;
       }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
 
       id = R.id.usuarioText;
       TextView usuarioText = ViewBindings.findChildViewById(rootView, id);
@@ -112,8 +148,9 @@ public final class ActivityDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDetailBinding((ScrollView) rootView, clienteText, descripcionText,
-          estadoText, fechaText, solucionadoText, usuarioText);
+      return new ActivityDetailBinding((RelativeLayout) rootView, binding_bottomNav,
+          btnVerSugerencias, clienteText, contenedorScroll, descripcionText, estadoText, fechaText,
+          binding_toolbar, usuarioText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

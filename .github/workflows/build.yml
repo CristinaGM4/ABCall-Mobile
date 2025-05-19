@@ -14,6 +14,7 @@ on:
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -28,19 +29,20 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
-      - name: Build APK
-        run: ./gradlew assembleRelease
-
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Save APK for next job
+      - name: Build APK
+        run: ./gradlew assembleRelease
+
+      - name: Upload APK as artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: app/build/outputs/apk/release/app-release.apk
 
   release:
+    name: Publish GitHub Release
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -59,7 +61,7 @@ jobs:
       - name: Determine next version
         id: version
         run: |
-          latest_tag=$(git describe --tags --abbrev=0 || echo "v0")
+          latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0")
           echo "Latest tag: $latest_tag"
           number=${latest_tag#v}
           next=$((number + 1))
@@ -74,4 +76,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          

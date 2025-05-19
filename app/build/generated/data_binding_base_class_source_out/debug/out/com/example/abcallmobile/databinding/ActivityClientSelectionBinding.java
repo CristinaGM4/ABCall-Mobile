@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.abcallmobile.R;
@@ -17,20 +19,33 @@ import java.lang.String;
 
 public final class ActivityClientSelectionBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final LinearLayout contenidoCliente;
 
   @NonNull
   public final GridView gridClientes;
 
-  private ActivityClientSelectionBinding(@NonNull LinearLayout rootView,
-      @NonNull GridView gridClientes) {
+  @NonNull
+  public final RecyclerView recyclerClientes;
+
+  @NonNull
+  public final ToolbarAbcallBinding toolbar;
+
+  private ActivityClientSelectionBinding(@NonNull RelativeLayout rootView,
+      @NonNull LinearLayout contenidoCliente, @NonNull GridView gridClientes,
+      @NonNull RecyclerView recyclerClientes, @NonNull ToolbarAbcallBinding toolbar) {
     this.rootView = rootView;
+    this.contenidoCliente = contenidoCliente;
     this.gridClientes = gridClientes;
+    this.recyclerClientes = recyclerClientes;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +70,33 @@ public final class ActivityClientSelectionBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.contenidoCliente;
+      LinearLayout contenidoCliente = ViewBindings.findChildViewById(rootView, id);
+      if (contenidoCliente == null) {
+        break missingId;
+      }
+
       id = R.id.gridClientes;
       GridView gridClientes = ViewBindings.findChildViewById(rootView, id);
       if (gridClientes == null) {
         break missingId;
       }
 
-      return new ActivityClientSelectionBinding((LinearLayout) rootView, gridClientes);
+      id = R.id.recyclerClientes;
+      RecyclerView recyclerClientes = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerClientes == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      return new ActivityClientSelectionBinding((RelativeLayout) rootView, contenidoCliente,
+          gridClientes, recyclerClientes, binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

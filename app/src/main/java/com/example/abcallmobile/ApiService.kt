@@ -11,11 +11,11 @@ interface ApiService {
     @POST("incidentes/v1/crear")
     fun crearIncidente(@Body body: Map<String, String>): Call<Void>
 
-    @GET("incidentes/v1/consultar")
-    suspend fun getIncidents(
-        @Query("tipoDocUsuario") tipoDoc: String,
-        @Query("numeroDocUsuario") numeroDoc: String
-    ): IncidentesResponse
+    @POST("incidentes/v1/consultar")
+    fun consultarIncidentes(@Body peticion: PeticionConsulta): Call<IncidenteResponse>
+
+    @GET("clientes/v1/listar")
+    fun listarClientes(): Call<ClienteResponse>
 }
 
 

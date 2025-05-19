@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +21,7 @@ import java.lang.String;
 
 public final class ActivityChatbotBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final Button btnCrearIncidente;
@@ -32,20 +33,30 @@ public final class ActivityChatbotBinding implements ViewBinding {
   public final TextView chatLog;
 
   @NonNull
+  public final LinearLayout contenidoChat;
+
+  @NonNull
   public final EditText inputMensaje;
 
-  private ActivityChatbotBinding(@NonNull LinearLayout rootView, @NonNull Button btnCrearIncidente,
-      @NonNull ImageButton btnEnviar, @NonNull TextView chatLog, @NonNull EditText inputMensaje) {
+  @NonNull
+  public final ToolbarAbcallBinding toolbar;
+
+  private ActivityChatbotBinding(@NonNull RelativeLayout rootView,
+      @NonNull Button btnCrearIncidente, @NonNull ImageButton btnEnviar, @NonNull TextView chatLog,
+      @NonNull LinearLayout contenidoChat, @NonNull EditText inputMensaje,
+      @NonNull ToolbarAbcallBinding toolbar) {
     this.rootView = rootView;
     this.btnCrearIncidente = btnCrearIncidente;
     this.btnEnviar = btnEnviar;
     this.chatLog = chatLog;
+    this.contenidoChat = contenidoChat;
     this.inputMensaje = inputMensaje;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -88,14 +99,27 @@ public final class ActivityChatbotBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.contenidoChat;
+      LinearLayout contenidoChat = ViewBindings.findChildViewById(rootView, id);
+      if (contenidoChat == null) {
+        break missingId;
+      }
+
       id = R.id.inputMensaje;
       EditText inputMensaje = ViewBindings.findChildViewById(rootView, id);
       if (inputMensaje == null) {
         break missingId;
       }
 
-      return new ActivityChatbotBinding((LinearLayout) rootView, btnCrearIncidente, btnEnviar,
-          chatLog, inputMensaje);
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      return new ActivityChatbotBinding((RelativeLayout) rootView, btnCrearIncidente, btnEnviar,
+          chatLog, contenidoChat, inputMensaje, binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
