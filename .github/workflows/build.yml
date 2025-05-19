@@ -70,12 +70,12 @@ jobs:
           echo "next_version=v$next" >> $GITHUB_ENV
 
       - name: Crear Release con APK
-  	uses: softprops/action-gh-release@v1
- 	with:
-    		tag_name: ${{ env.next_version }}
-    		name: Release ${{ env.next_version }}
-    	files: |
-      		app-artifacts/app-release.apk
-     		app-artifacts/app-debug.apk
-  	env:
-    		GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.next_version }}
+          name: Release ${{ env.next_version }}
+          files: |
+            app-artifacts/app-release.apk
+            app-artifacts/app-debug.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
