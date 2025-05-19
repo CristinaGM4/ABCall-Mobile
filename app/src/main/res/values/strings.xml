@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ABCall</string>
+    <string name="label_cliente">Cliente:</string>
+    <string name="hint_numero_documento">Número de documento del usuario</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="tipo_documento">Tipo de documento (1 a 6):</string>
+    <string name="sugerencias_titulo">Sugerencias de soluciones</string>
+    <string name="label_incidente">Incidente:</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="desc_lista_sugerencias">Lista de sugerencias para el incidente</string>
+</resources>

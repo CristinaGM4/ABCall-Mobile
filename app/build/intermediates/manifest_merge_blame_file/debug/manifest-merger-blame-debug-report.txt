@@ -24,7 +24,7 @@
 17-->[androidx.core:core:1.10.1] C:\Users\Propietario\.gradle\caches\8.10\transforms\47a817709b6cd05f6108a5a198b0a0b1\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-45:19
+19-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-61:19
 20        android:name="com.example.abcallmobile.MyApp"
 20-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:8:9-30
 21        android:allowBackup="true"
@@ -37,133 +37,168 @@
 25-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:11:9-49
 26        android:label="ABCallMobile"
 26-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:10:9-37
-27        android:roundIcon="@android:drawable/star_on"
-27-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:12:9-54
-28        android:supportsRtl="true"
-28-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:13:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" >
-30-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:14:9-79
-31        <activity
-31-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:16:9-23:20
-32            android:name="com.example.abcallmobile.WelcomeActivity"
-32-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:16:19-50
-33            android:exported="true"
-33-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:17:13-36
-34            android:label="ABCall" >
-34-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:18:13-35
-35            <intent-filter>
-35-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:19:13-22:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:20:17-69
-36-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:20:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:21:17-77
-38-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:21:27-74
-39            </intent-filter>
-40        </activity>
-41        <activity
-41-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:25:9-26:40
-42            android:name="com.example.abcallmobile.ClientSelectionActivity"
-42-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:25:19-58
-43            android:exported="false" />
-43-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:26:13-37
-44        <activity
-44-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:9-30:53
-45            android:name="com.example.abcallmobile.MainActivity"
-45-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:19-47
-46            android:exported="false"
-46-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:29:13-37
-47            android:label="Listado de Incidentes" />
-47-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:30:13-50
-48        <activity
-48-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:9-33:39
-49            android:name="com.example.abcallmobile.DetailActivity"
-49-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:19-49
-50            android:exported="true" />
-50-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:33:13-36
+27        android:networkSecurityConfig="@xml/network_security_config"
+27-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:15:9-69
+28        android:roundIcon="@android:drawable/star_on"
+28-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:12:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:13:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" >
+31-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:14:9-79
+32        <activity
+32-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:17:9-26:20
+33            android:name="com.example.abcallmobile.WelcomeActivity"
+33-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:17:19-50
+34            android:exported="true"
+34-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:18:13-36
+35            android:label="ABCall"
+35-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:19:13-35
+36            android:theme="@style/Theme.ABCallMobile" >
+36-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:20:13-54
+37            <intent-filter>
+37-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:22:13-25:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:23:17-69
+38-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:23:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:17-77
+40-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:27-74
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:9-30:56
+44            android:name="com.example.abcallmobile.ClientSelectionActivity"
+44-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:19-58
+45            android:exported="false"
+45-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:29:13-37
+46            android:theme="@style/Theme.ABCallMobile" />
+46-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:30:13-54
+47        <activity
+47-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:9-34:56
+48            android:name="com.example.abcallmobile.DetailActivity"
+48-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:19-49
+49            android:exported="true"
+49-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:33:13-36
+50            android:theme="@style/Theme.ABCallMobile" />
+50-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:34:13-54
 51        <activity
-51-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:35:9-36:39
+51-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:36:9-38:56
 52            android:name="com.example.abcallmobile.CreateIncidentActivity"
-52-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:35:19-57
-53            android:exported="true" />
-53-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:36:13-36
-54        <activity android:name="com.example.abcallmobile.FAQActivity" />
-54-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:38:9-49
-54-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:38:19-46
-55        <activity android:name="com.example.abcallmobile.ChatbotActivity" />
-55-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:9-53
-55-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:19-50
-56        <activity android:name="com.example.abcallmobile.SolucionesActivity" />
-56-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:42:9-56
-56-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:42:19-53
-57
-58        <provider
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-59            android:name="androidx.startup.InitializationProvider"
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-60            android:authorities="com.example.abcallmobile.androidx-startup"
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-61            android:exported="false" >
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-62            <meta-data
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-64                android:value="androidx.startup" />
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-65            <meta-data
-65-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-66-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-67                android:value="androidx.startup" />
-67-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-68            <meta-data
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-69                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-69-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-70                android:value="androidx.startup" />
-70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-71        </provider>
-72
-73        <receiver
-73-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-74            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-75            android:directBootAware="false"
-75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-76            android:enabled="true"
-76-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-77            android:exported="true"
-77-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-78            android:permission="android.permission.DUMP" >
-78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-79            <intent-filter>
-79-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-80                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-81            </intent-filter>
-82            <intent-filter>
-82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-83                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-84            </intent-filter>
-85            <intent-filter>
-85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-86                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-87            </intent-filter>
-88            <intent-filter>
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-89                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-90            </intent-filter>
-91        </receiver>
-92    </application>
-93
-94</manifest>
+52-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:36:19-57
+53            android:exported="true"
+53-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:37:13-36
+54            android:theme="@style/Theme.ABCallMobile" />
+54-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:38:13-54
+55        <activity
+55-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:9-41:56
+56            android:name="com.example.abcallmobile.FAQActivity"
+56-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:19-46
+57            android:theme="@style/Theme.ABCallMobile" />
+57-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:41:13-54
+58        <activity
+58-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:43:9-44:56
+59            android:name="com.example.abcallmobile.ChatbotActivity"
+59-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:43:19-50
+60            android:theme="@style/Theme.ABCallMobile" />
+60-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:44:13-54
+61        <activity
+61-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:46:9-47:56
+62            android:name="com.example.abcallmobile.SolucionesActivity"
+62-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:46:19-53
+63            android:theme="@style/Theme.ABCallMobile" />
+63-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:47:13-54
+64        <activity
+64-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:49:9-50:56
+65            android:name="com.example.abcallmobile.IdentificacionUsuarioActivity"
+65-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:49:19-64
+66            android:theme="@style/Theme.ABCallMobile" />
+66-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:50:13-54
+67        <activity
+67-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:52:9-53:56
+68            android:name="com.example.abcallmobile.ListaIncidentesActivity"
+68-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:52:19-58
+69            android:theme="@style/Theme.ABCallMobile" />
+69-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:53:13-54
+70        <activity
+70-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:55:9-56:56
+71            android:name="com.example.abcallmobile.ConfiguracionActivity"
+71-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:55:19-56
+72            android:theme="@style/Theme.ABCallMobile" />
+72-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:56:13-54
+73        <activity
+73-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:58:9-59:56
+74            android:name="com.example.abcallmobile.ConfirmacionLecturaActivity"
+74-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:58:19-62
+75            android:theme="@style/Theme.ABCallMobile" />
+75-->C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:59:13-54
+76
+77        <provider
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+78            android:name="androidx.startup.InitializationProvider"
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+79            android:authorities="com.example.abcallmobile.androidx-startup"
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+80            android:exported="false" >
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+81            <meta-data
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+82                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+83                android:value="androidx.startup" />
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\051a069f0dd3e65815e38ffafde97e38\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+84            <meta-data
+84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+86                android:value="androidx.startup" />
+86-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Propietario\.gradle\caches\8.10\transforms\c4fce815875219fe213b7ff213552f94\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+89                android:value="androidx.startup" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+90        </provider>
+91
+92        <receiver
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+93            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+94            android:directBootAware="false"
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+95            android:enabled="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+96            android:exported="true"
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+97            android:permission="android.permission.DUMP" >
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+99                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+102                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+105                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+108                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\3f5169775fe5dd0d001173b1353728da\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+109            </intent-filter>
+110        </receiver>
+111    </application>
+112
+113</manifest>

@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.abcallmobile.ApiClient
 
-
-class CreateIncidentActivity : AppCompatActivity() {
+class CreateIncidentActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_incident)
@@ -25,8 +22,12 @@ class CreateIncidentActivity : AppCompatActivity() {
         }
 
         val btnCrear = findViewById<Button>(R.id.btnCrearIncidente)
+
+        // Obtener datos guardados del usuario y cliente
         val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
-        val clienteGuardado = sharedPref.getString("clienteNombre", "1010101010")
+        val tipoDocUsuario = sharedPref.getString("tipoDocUsuario", "1") ?: "1"
+        val numeroDocUsuario = sharedPref.getString("numeroDocUsuario", "") ?: ""
+        val numeroDocCliente = sharedPref.getString("clienteDocumento", "") ?: ""
 
         btnCrear.setOnClickListener {
             val asunto = inputAsunto.text.toString().trim()
@@ -36,9 +37,9 @@ class CreateIncidentActivity : AppCompatActivity() {
                 Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show()
             } else {
                 val incidenteRequest = mapOf(
-                    "tipoDocumentoUsuario" to "CC",
-                    "numDocumentoUsuario" to "51287946",
-                    "numDocumentoCliente" to "1010101010", // Fijo por ahora
+                    "tipoDocumentoUsuario" to tipoDocUsuario,
+                    "numDocumentoUsuario" to numeroDocUsuario,
+                    "numDocumentoCliente" to numeroDocCliente,
                     "descripcion" to descripcion
                 )
 

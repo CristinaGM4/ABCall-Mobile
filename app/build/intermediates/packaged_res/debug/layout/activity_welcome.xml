@@ -1,39 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="@android:color/white">
 
-    <ImageView
-        android:src="@drawable/headset"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
-
-    <TextView
-        android:text="ABCall"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:textColor="#4CAF50"
-        android:layout_marginTop="16dp"
-        android:layout_width="wrap_content"
+    <!-- Barra superior fija al borde -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_abcall"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:text="Mejore las interacciones con los clientes con análisis predictivos"
-        android:gravity="center"
-        android:layout_margin="16dp"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!-- Contenido centrado debajo de la barra -->
+    <LinearLayout
+        android:id="@+id/contenidoInicio"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnEmpezar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Empezar"
-        android:background="#4CAF50"
-        android:textColor="#ffffff"
-        android:layout_marginTop="24dp" />
-</LinearLayout>
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo_abcall"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Logo ABCall" />
+
+        <!-- Nombre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABCall"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <!-- Descripción -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Optimice la atención a clientes con soluciones inteligentes"
+            android:textColor="#444"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp" />
+
+        <!-- Botón -->
+        <Button
+            android:id="@+id/btnEmpezar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMPEZAR"
+            android:textAllCaps="true"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp" />
+    </LinearLayout>
+</RelativeLayout>

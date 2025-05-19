@@ -3,10 +3,9 @@ package com.example.abcallmobile
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
 
-class FAQActivity : AppCompatActivity() {
+class FAQActivity : BaseActivity() {
 
     private val faqMap = mapOf(
         "¿Qué información debe incluir un reporte de incidente?" to "Incluye: nombre del cliente, descripción detallada del incidente y fecha.",

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,10 +19,16 @@ import java.lang.String;
 
 public final class ActivityCreateIncidentBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final BottomNavBarBinding bottomNav;
 
   @NonNull
   public final Button btnCrearIncidente;
+
+  @NonNull
+  public final ScrollView contenedorCrear;
 
   @NonNull
   public final EditText inputAsunto;
@@ -29,18 +36,25 @@ public final class ActivityCreateIncidentBinding implements ViewBinding {
   @NonNull
   public final EditText inputDescripcion;
 
-  private ActivityCreateIncidentBinding(@NonNull ScrollView rootView,
-      @NonNull Button btnCrearIncidente, @NonNull EditText inputAsunto,
-      @NonNull EditText inputDescripcion) {
+  @NonNull
+  public final ToolbarAbcallBinding toolbar;
+
+  private ActivityCreateIncidentBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavBarBinding bottomNav, @NonNull Button btnCrearIncidente,
+      @NonNull ScrollView contenedorCrear, @NonNull EditText inputAsunto,
+      @NonNull EditText inputDescripcion, @NonNull ToolbarAbcallBinding toolbar) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
     this.btnCrearIncidente = btnCrearIncidente;
+    this.contenedorCrear = contenedorCrear;
     this.inputAsunto = inputAsunto;
     this.inputDescripcion = inputDescripcion;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -65,9 +79,22 @@ public final class ActivityCreateIncidentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_nav;
+      View bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+      BottomNavBarBinding binding_bottomNav = BottomNavBarBinding.bind(bottomNav);
+
       id = R.id.btnCrearIncidente;
       Button btnCrearIncidente = ViewBindings.findChildViewById(rootView, id);
       if (btnCrearIncidente == null) {
+        break missingId;
+      }
+
+      id = R.id.contenedorCrear;
+      ScrollView contenedorCrear = ViewBindings.findChildViewById(rootView, id);
+      if (contenedorCrear == null) {
         break missingId;
       }
 
@@ -83,8 +110,15 @@ public final class ActivityCreateIncidentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCreateIncidentBinding((ScrollView) rootView, btnCrearIncidente,
-          inputAsunto, inputDescripcion);
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      return new ActivityCreateIncidentBinding((RelativeLayout) rootView, binding_bottomNav,
+          btnCrearIncidente, contenedorCrear, inputAsunto, inputDescripcion, binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

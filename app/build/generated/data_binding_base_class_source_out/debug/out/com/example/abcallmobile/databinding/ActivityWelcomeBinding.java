@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -17,19 +18,28 @@ import java.lang.String;
 
 public final class ActivityWelcomeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final Button btnEmpezar;
 
-  private ActivityWelcomeBinding(@NonNull LinearLayout rootView, @NonNull Button btnEmpezar) {
+  @NonNull
+  public final LinearLayout contenidoInicio;
+
+  @NonNull
+  public final ToolbarAbcallBinding toolbar;
+
+  private ActivityWelcomeBinding(@NonNull RelativeLayout rootView, @NonNull Button btnEmpezar,
+      @NonNull LinearLayout contenidoInicio, @NonNull ToolbarAbcallBinding toolbar) {
     this.rootView = rootView;
     this.btnEmpezar = btnEmpezar;
+    this.contenidoInicio = contenidoInicio;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -60,7 +70,21 @@ public final class ActivityWelcomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityWelcomeBinding((LinearLayout) rootView, btnEmpezar);
+      id = R.id.contenidoInicio;
+      LinearLayout contenidoInicio = ViewBindings.findChildViewById(rootView, id);
+      if (contenidoInicio == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      return new ActivityWelcomeBinding((RelativeLayout) rootView, btnEmpezar, contenidoInicio,
+          binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

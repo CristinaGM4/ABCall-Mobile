@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,37 +20,37 @@ import java.lang.String;
 
 public final class ActivitySolucionesBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
-
-  @NonNull
-  public final TextView asuntoIncidente;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final Button btnAceptar;
 
   @NonNull
-  public final TextView incidenteId;
+  public final LinearLayout contenedorSugerencias;
 
   @NonNull
-  public final TextView preguntaSugerencias;
+  public final ScrollView scrollSugerencias;
 
   @NonNull
-  public final TextView titulo;
+  public final ToolbarAbcallBinding toolbar;
 
-  private ActivitySolucionesBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView asuntoIncidente, @NonNull Button btnAceptar, @NonNull TextView incidenteId,
-      @NonNull TextView preguntaSugerencias, @NonNull TextView titulo) {
+  @NonNull
+  public final TextView txtIdIncidente;
+
+  private ActivitySolucionesBinding(@NonNull RelativeLayout rootView, @NonNull Button btnAceptar,
+      @NonNull LinearLayout contenedorSugerencias, @NonNull ScrollView scrollSugerencias,
+      @NonNull ToolbarAbcallBinding toolbar, @NonNull TextView txtIdIncidente) {
     this.rootView = rootView;
-    this.asuntoIncidente = asuntoIncidente;
     this.btnAceptar = btnAceptar;
-    this.incidenteId = incidenteId;
-    this.preguntaSugerencias = preguntaSugerencias;
-    this.titulo = titulo;
+    this.contenedorSugerencias = contenedorSugerencias;
+    this.scrollSugerencias = scrollSugerencias;
+    this.toolbar = toolbar;
+    this.txtIdIncidente = txtIdIncidente;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -73,38 +75,39 @@ public final class ActivitySolucionesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.asunto_incidente;
-      TextView asuntoIncidente = ViewBindings.findChildViewById(rootView, id);
-      if (asuntoIncidente == null) {
-        break missingId;
-      }
-
       id = R.id.btnAceptar;
       Button btnAceptar = ViewBindings.findChildViewById(rootView, id);
       if (btnAceptar == null) {
         break missingId;
       }
 
-      id = R.id.incidente_id;
-      TextView incidenteId = ViewBindings.findChildViewById(rootView, id);
-      if (incidenteId == null) {
+      id = R.id.contenedorSugerencias;
+      LinearLayout contenedorSugerencias = ViewBindings.findChildViewById(rootView, id);
+      if (contenedorSugerencias == null) {
         break missingId;
       }
 
-      id = R.id.pregunta_sugerencias;
-      TextView preguntaSugerencias = ViewBindings.findChildViewById(rootView, id);
-      if (preguntaSugerencias == null) {
+      id = R.id.scrollSugerencias;
+      ScrollView scrollSugerencias = ViewBindings.findChildViewById(rootView, id);
+      if (scrollSugerencias == null) {
         break missingId;
       }
 
-      id = R.id.titulo;
-      TextView titulo = ViewBindings.findChildViewById(rootView, id);
-      if (titulo == null) {
+      id = R.id.toolbar;
+      View toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+      ToolbarAbcallBinding binding_toolbar = ToolbarAbcallBinding.bind(toolbar);
+
+      id = R.id.txtIdIncidente;
+      TextView txtIdIncidente = ViewBindings.findChildViewById(rootView, id);
+      if (txtIdIncidente == null) {
         break missingId;
       }
 
-      return new ActivitySolucionesBinding((LinearLayout) rootView, asuntoIncidente, btnAceptar,
-          incidenteId, preguntaSugerencias, titulo);
+      return new ActivitySolucionesBinding((RelativeLayout) rootView, btnAceptar,
+          contenedorSugerencias, scrollSugerencias, binding_toolbar, txtIdIncidente);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

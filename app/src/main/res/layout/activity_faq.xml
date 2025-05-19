@@ -1,21 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@android:color/white"
     android:padding="16dp">
 
+    <!-- Barra superior fija -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_abcall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Título debajo de la barra -->
     <TextView
         android:id="@+id/faq_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:text="Consultar FAQ"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:layout_marginTop="8dp" />
 
+    <!-- Lista de preguntas debajo del título y encima del bottom nav -->
     <ListView
         android:id="@+id/faq_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/faq_title"
+        android:layout_above="@id/bottom_nav"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Barra inferior fija -->
+    <include
+        android:id="@+id/bottom_nav"
+        layout="@layout/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

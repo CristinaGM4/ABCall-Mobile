@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Barra verde fija arriba -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_abcall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Contenido debajo de la barra -->
+    <LinearLayout
+        android:id="@+id/contenidoConfirmacion"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textoConfirmacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="24dp"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btnConfirmarLectura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar lectura"
+            android:backgroundTint="#A7D88C"
+            android:textColor="#000000" />
+    </LinearLayout>
+</RelativeLayout>

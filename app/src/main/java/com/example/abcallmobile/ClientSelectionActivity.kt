@@ -2,35 +2,56 @@ package com.example.abcallmobile
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.GridView
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import com.example.abcallmobile.IdentificacionUsuarioActivity
 
 class ClientSelectionActivity : AppCompatActivity() {
-
-    private val clientes = arrayOf(
-        "Cliente 1", "Cliente 2", "Cliente 3",
-        "Cliente 4", "Cliente 5", "Cliente 6"
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_client_selection)
 
-        val gridView = findViewById<GridView>(R.id.gridClientes)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, clientes)
-        gridView.adapter = adapter
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerClientes)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        gridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
-            val editor = sharedPref.edit()
-            editor.putString("clienteNombre", clientes[position])
-            editor.apply()
+        ApiClient.apiService.listarClientes().enqueue(object : Callback<ClienteResponse> {
+            override fun onResponse(call: Call<ClienteResponse>, response: Response<ClienteResponse>) {
+                if (response.isSuccessful) {
+                    val clientes = response.body()?.data ?: emptyList()
+                    Log.d("CLIENTES", "Clientes recibidos: $clientes")
 
-            val intent = Intent(this, MainActivity::class.java) // ← Cambia si tu vista principal tiene otro nombre
-            intent.putExtra("clienteSeleccionado", clientes[position])
-            startActivity(intent)
-        }
+                    val adapter = ClienteAdapter(clientes) { clienteSeleccionado ->
+                        val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+                        with(sharedPref.edit()) {
+                            putString("clienteNombre", clienteSeleccionado.socialReason)
+                            putString("clienteDocumento", clienteSeleccionado.documentNumber.toString())
+                            apply()
+                        }
+
+                        Log.d("CLIENTE", "Guardado clienteNombre=${clienteSeleccionado.socialReason}, clienteDocumento=${clienteSeleccionado.documentNumber}")
+
+                        val intent = Intent(this@ClientSelectionActivity, IdentificacionUsuarioActivity::class.java)
+                        intent.putExtra("clienteSeleccionado", clienteSeleccionado.socialReason)
+                        startActivity(intent)
+                    }
+
+                    recyclerView.adapter = adapter
+                } else {
+                    Toast.makeText(this@ClientSelectionActivity, "Error en respuesta", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ClienteResponse>, t: Throwable) {
+                Toast.makeText(this@ClientSelectionActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                Log.e("CLIENTES", "Error: ${t.message}")
+            }
+        })
     }
 }

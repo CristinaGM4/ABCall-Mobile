@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ListaIncidentesActivity">
+
+    <!-- Barra superior fija -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_abcall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Botón: FAQ -->
+    <Button
+        android:id="@+id/btnFAQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:text="Consultar FAQ"
+        android:backgroundTint="#A7D88C"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
+
+    <!-- Botón: Nuevo Incidente -->
+    <Button
+        android:id="@+id/btnNuevoIncidente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFAQ"
+        android:text="NUEVO INCIDENTE"
+        android:backgroundTint="#A7D88C"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView: Lista de incidentes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIncidentes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/btnNuevoIncidente"
+        android:layout_above="@id/bottom_nav"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:layout_margin="8dp"
+        android:contentDescription="Lista de incidentes activos del cliente" />
+
+    <!-- Barra inferior -->
+    <include
+        android:id="@+id/bottom_nav"
+        layout="@layout/bottom_nav_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

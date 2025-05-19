@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:background="#4CAF50"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <!-- Ícono: Configuración -->
+    <ImageButton
+        android:id="@+id/btnConfiguracion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_config"
+        android:contentDescription="Configuración"
+        app:tint="#000000" />
+
+    <!-- Ícono: Salir -->
+    <ImageButton
+        android:id="@+id/btnSalir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_salir"
+        android:contentDescription="Salir"
+        app:tint="#000000" />
+
+    <!-- Ícono: Chatbot -->
+    <ImageButton
+        android:id="@+id/btnChatbot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_chatbot"
+        android:contentDescription="Chatbot"
+        app:tint="#000000" />
+</LinearLayout>

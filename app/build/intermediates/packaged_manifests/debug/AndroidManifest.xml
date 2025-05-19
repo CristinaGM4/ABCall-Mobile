@@ -24,6 +24,7 @@
         android:extractNativeLibs="false"
         android:icon="@android:drawable/star_on"
         android:label="ABCallMobile"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@android:drawable/star_on"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -31,7 +32,8 @@
         <activity
             android:name="com.example.abcallmobile.WelcomeActivity"
             android:exported="true"
-            android:label="ABCall" >
+            android:label="ABCall"
+            android:theme="@style/Theme.ABCallMobile" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,20 +42,37 @@
         </activity>
         <activity
             android:name="com.example.abcallmobile.ClientSelectionActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.abcallmobile.MainActivity"
             android:exported="false"
-            android:label="Listado de Incidentes" />
+            android:theme="@style/Theme.ABCallMobile" />
         <activity
             android:name="com.example.abcallmobile.DetailActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.ABCallMobile" />
         <activity
             android:name="com.example.abcallmobile.CreateIncidentActivity"
-            android:exported="true" />
-        <activity android:name="com.example.abcallmobile.FAQActivity" />
-        <activity android:name="com.example.abcallmobile.ChatbotActivity" />
-        <activity android:name="com.example.abcallmobile.SolucionesActivity" />
+            android:exported="true"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.FAQActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.ChatbotActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.SolucionesActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.IdentificacionUsuarioActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.ListaIncidentesActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.ConfiguracionActivity"
+            android:theme="@style/Theme.ABCallMobile" />
+        <activity
+            android:name="com.example.abcallmobile.ConfirmacionLecturaActivity"
+            android:theme="@style/Theme.ABCallMobile" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

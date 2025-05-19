@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aceptar">Aceptar</string>
+    <string name="app_name">ABCall</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="desc_lista_sugerencias">Lista de sugerencias para el incidente</string>
+    <string name="hint_numero_documento">Número de documento del usuario</string>
+    <string name="label_cliente">Cliente:</string>
+    <string name="label_incidente">Incidente:</string>
+    <string name="sugerencias_titulo">Sugerencias de soluciones</string>
+    <string name="tipo_documento">Tipo de documento (1 a 6):</string>
+    <style name="CustomBotonVerde">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/boton_borde_verde</item>
+        <item name="android:textColor">#4CAF50</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+    <style name="Theme.ABCallMobile" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#388E3C</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+</resources>

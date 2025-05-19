@@ -1,25 +1,10 @@
 package com.example.abcallmobile
 
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.Call
 
-class IncidentRepository {
-    private val apiService: ApiService
+object IncidentRepository {
 
-    init {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://abcall-gateway-bwh34xmh.uc.gateway.dev/service/abcall/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        apiService = retrofit.create(ApiService::class.java)
+    fun getIncidents(peticion: PeticionConsulta): Call<IncidenteResponse> {
+        return ApiClient.apiService.consultarIncidentes(peticion)
     }
-
-    suspend fun getIncidents(): List<Incidente> {
-        val tipoDoc = "CC"
-        val numeroDoc = "51287946"
-        return apiService.getIncidents(tipoDoc, numeroDoc).data
-    }
-
-
 }
