@@ -2,15 +2,20 @@ name: Build, Test and Release APK
 
 on:
   push:
-    branches: [develop, release, main]
+    branches:
+      - develop
+      - release
+      - main
   pull_request:
-    branches: [develop, release]
+    branches:
+      - develop
+      - release
+      - main
 
 jobs:
   build:
     name: Build and Test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,7 +32,7 @@ jobs:
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Build Release APK
+      - name: Build APK
         run: ./gradlew assembleRelease
 
       - name: Upload APK as artifact
@@ -39,9 +44,8 @@ jobs:
   release:
     name: Publish GitHub Release
     needs: build
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -51,7 +55,7 @@ jobs:
         with:
           name: app-release
 
-      - name: Fetch Git tags
+      - name: Fetch tags
         run: git fetch --tags
 
       - name: Determine next version
