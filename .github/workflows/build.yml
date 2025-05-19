@@ -1,15 +1,21 @@
 name: Build, Test and Release APK
 
 on:
-  pull_request:
-    branches: [release]
   push:
-    branches: [release]
+    branches:
+      - develop
+      - release
+      - main
+  pull_request:
+    branches:
+      - develop
+      - release
+      - main
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,19 +26,55 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Grant Gradle permissions
+      - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Build APK
-        run: ./gradlew assembleRelease
+      - name: Build APK (debug y release)
+        run: ./gradlew assembleDebug assembleRelease
 
-      - name: Upload APK (debug y release si existen)
-  	uses: actions/upload-artifact@v4
-  	with:
-    	name: app-artifacts
-    	path: |
-      	app/build/outputs/apk/debug/app-debug.apk
-      	app/build/outputs/apk/release/app-release.apk
+      - name: Upload APKs (debug y release)
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-artifacts
+          path: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/release/app-release.apk
+
+  release:
+    name: Publicar GitHub Release
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download built APKs
+        uses: actions/download-artifact@v4
+        with:
+          name: app-artifacts
+
+      - name: Fetch tags
+        run: git fetch --tags
+
+      - name: Determinar siguiente versión
+        id: version
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0")
+          echo "Latest tag: $latest_tag"
+          number=${latest_tag#v}
+          next=$((number + 1))
+          echo "next_version=v$next" >> $GITHUB_ENV
+
+      - name: Crear Release con APK
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.next_version }}
+          name: Release ${{ env.next_version }}
+          files: |
+            app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
