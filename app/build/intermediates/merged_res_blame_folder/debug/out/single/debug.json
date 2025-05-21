@@ -1,15 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_incident.xml.flat",
-        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_incident.xml"
-    },
-    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_boton_borde_verde.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\boton_borde_verde.xml"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_bottom_nav_bar.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\bottom_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_incident.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_incident.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_ic_salir.xml.flat",
@@ -24,12 +28,44 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\borde_sugerencia.xml"
     },
     {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_configuracion.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_configuracion.xml"
     },
     {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.abcallmobile.app-main-35:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_circle_green.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\circle_green.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_sugerencia_background.xml.flat",
@@ -48,8 +84,20 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_soluciones.xml"
     },
     {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_create_incident.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_create_incident.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_client_selection.xml.flat",
@@ -60,8 +108,8 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\anim\\blink.xml"
     },
     {
-        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_main.xml"
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-mdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\xml_network_security_config.xml.flat",
@@ -76,10 +124,6 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_confirmacion_lectura.xml"
     },
     {
-        "merged": "com.example.abcallmobile.app-merged_res-33:/layout_activity_incident.xml.flat",
-        "source": "com.example.abcallmobile.app-main-35:/layout/activity_incident.xml"
-    },
-    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_item_incident.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\item_incident.xml"
     },
@@ -88,8 +132,20 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_faq.xml"
     },
     {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_identificacion_usuario.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_identificacion_usuario.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_ic_config.xml.flat",
@@ -100,12 +156,24 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\headset.png"
     },
     {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_activity_detail.xml.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_detail.xml"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_logo_abcall.png.flat",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\logo_abcall.png"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\drawable_colors.xml.flat",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\drawable\\colors.xml"
+    },
+    {
+        "merged": "com.example.abcallmobile.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.abcallmobile.app-main-35:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-merged_res-33:\\layout_item_cliente.xml.flat",

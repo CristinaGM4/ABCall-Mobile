@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.abcallmobile.util.AlertaHelper
 
 
 class ListaIncidentesActivity : BaseActivity() {
@@ -50,6 +51,16 @@ class ListaIncidentesActivity : BaseActivity() {
         btnNuevo.setOnClickListener {
             val intent = Intent(this, CreateIncidentActivity::class.java)
             startActivityForResult(intent, REQUEST_NUEVO_INCIDENTE)
+        }
+
+        val prefsNoti = getSharedPreferences("notificaciones", MODE_PRIVATE)
+
+        if (prefsNoti.getBoolean("notificar_estado", true)) {
+            AlertaHelper.mostrarAlerta(this, "🔄 Un incidente ha cambiado de estado recientemente.")
+        }
+
+        if (prefsNoti.getBoolean("notificar_alertas", true)) {
+            AlertaHelper.mostrarAlerta(this, "ℹ️ Recuerda revisar los mensajes del sistema.")
         }
     }
 
