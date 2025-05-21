@@ -16,16 +16,12 @@
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_confirmacion_lectura.xml"
     },
     {
+        "merged": "com.example.abcallmobile.app-mergeDebugResources-32:/layout/activity_soluciones.xml",
+        "source": "com.example.abcallmobile.app-main-35:/layout/activity_soluciones.xml"
+    },
+    {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_client_selection.xml",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_client_selection.xml"
-    },
-    {
-        "merged": "com.example.abcallmobile.app-mergeDebugResources-32:/layout/activity_incident.xml",
-        "source": "com.example.abcallmobile.app-main-35:/layout/activity_incident.xml"
-    },
-    {
-        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_identificacion_usuario.xml",
-        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_identificacion_usuario.xml"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_welcome.xml",
@@ -34,6 +30,10 @@
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_create_incident.xml",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_create_incident.xml"
+    },
+    {
+        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_identificacion_usuario.xml",
+        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_identificacion_usuario.xml"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_incident.xml",
@@ -58,10 +58,6 @@
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\bottom_nav_bar.xml",
         "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\bottom_nav_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-main-35:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Propietario\\.gradle\\daemon\\8.10\\com.example.abcallmobile.app-mergeDebugResources-32:\\layout\\item_cliente.xml",

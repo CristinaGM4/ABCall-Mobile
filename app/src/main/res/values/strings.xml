@@ -2,10 +2,69 @@
     <string name="app_name">ABCall</string>
     <string name="label_cliente">Cliente:</string>
     <string name="hint_numero_documento">Número de documento del usuario</string>
-    <string name="btn_continuar">Continuar</string>
     <string name="tipo_documento">Tipo de documento (1 a 6):</string>
-    <string name="sugerencias_titulo">Sugerencias de soluciones</string>
+
     <string name="label_incidente">Incidente:</string>
     <string name="aceptar">Aceptar</string>
     <string name="desc_lista_sugerencias">Lista de sugerencias para el incidente</string>
+    <!-- Pantalla de bienvenida -->
+
+    <string name="bienvenida_titulo">ABCall</string>
+    <string name="bienvenida_subtitulo">Optimice la atención a clientes con soluciones inteligentes</string>
+    <string name="btn_empezar">EMPEZAR</string>
+
+    <!-- Selección de cliente -->
+    <string name="seleccion_cliente_titulo">Seleccione un cliente</string>
+
+    <!-- Identificación del usuario -->
+    <string name="cliente_seleccionado">Cliente: %1$s</string>
+    <string name="tipo_documento_label">Tipo de documento (1(CC), 2(CE), 3(PP), 4(CD), 5(PEP), 6(NUIP)):</string>
+    <string name="numero_documento_hint">Número de documento del usuario</string>
+    <string name="btn_continuar">CONTINUAR</string>
+
+    <!-- Listado de incidentes -->
+    <string name="btn_consultar_faq">CONSULTAR FAQ</string>
+    <string name="btn_nuevo_incidente">NUEVO INCIDENTE</string>
+    <string name="incidente_id_fecha">ID: %1$s
+Fecha: %2$s</string>
+
+    <!-- FAQ -->
+    <string name="faq_titulo">Consultar FAQ</string>
+    <string name="faq_p1">¿Qué información debe incluir un reporte de incidente?</string>
+    <string name="faq_p2">¿Dónde puedo ver mis incidentes?</string>
+    <string name="faq_p3">¿Qué debo hacer si un incidente ya fue resuelto por el cliente?</string>
+    <string name="faq_p4">¿Puedo editar un incidente después de registrarlo?</string>
+    <string name="faq_p5">¿Qué pasa si ingreso datos incorrectos por error?</string>
+    <string name="faq_p6">¿Cómo se priorizan los incidentes?</string>
+    <string name="faq_p7">¿Qué información es obligatoria al registrar un incidente?</string>
+    <string name="faq_p8">¿Puedo ver el detalle de un incidente que ya registré?</string>
+
+    <!-- Crear incidente -->
+    <string name="asunto_label">Asunto:</string>
+    <string name="asunto_hint">Proporcione un título del incidente.</string>
+    <string name="descripcion_label">Descripción del caso:</string>
+    <string name="descripcion_hint">Proporcione una descripción del incidente.</string>
+    <string name="btn_crear_incidente">CREAR INCIDENTE</string>
+
+    <!-- Configuración -->
+    <string name="configuracion_titulo">Configuración</string>
+    <string name="notificaciones_titulo">Notificaciones</string>
+    <string name="notificacion_estado">Cambios en el estado de un incidente</string>
+    <string name="notificacion_mensajes">Mensajes o alertas informativas</string>
+
+    <!-- Detalle incidente -->
+    <string name="detalle_descripcion">Descripción: %1$s</string>
+    <string name="detalle_estado">Estado: %1$s</string>
+    <string name="detalle_fecha">Fecha: %1$s</string>
+    <string name="detalle_cliente">Cliente: %1$s</string>
+    <string name="detalle_usuario">Usuario: %1$s</string>
+    <string name="btn_ver_sugerencias">VER SUGERENCIAS</string>
+
+    <!-- Sugerencias -->
+    <string name="sugerencias_titulo">Sugerencias de soluciones</string>
+    <string name="sugerencias_incidente">Incidente: %1$s</string>
+    <string name="sugerencia_paso_1">Paso 1: Reinicia el equipo.</string>
+    <string name="sugerencia_paso_2">Paso 2: Verifica los cables y conexiones.</string>
+    <string name="sugerencia_paso_3">Paso 3: Contacta al soporte técnico si continúa el problema.</string>
+
 </resources>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-63:12
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\Propietario\.gradle\caches\8.10\transforms\128315880d1fccf1c54c29ea138a888a\transformed\jetified-viewbinding-8.1.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Propietario\.gradle\caches\8.10\transforms\7c46f48015c3f5155cabb96cbcfa3d7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -62,8 +62,8 @@ ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main
 	android:name
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-61:19
-INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-61:19
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-62:19
+INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:7:5-62:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Propietario\.gradle\caches\8.10\transforms\dd09262c8748245ee35ee296921c0ab8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Propietario\.gradle\caches\8.10\transforms\7c46f48015c3f5155cabb96cbcfa3d7a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -91,7 +91,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Propietario\.gradl
 	android:roundIcon
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:11:9-49
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
@@ -101,91 +101,91 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Propietario\.gradl
 	android:name
 		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:8:9-30
 activity#com.example.abcallmobile.WelcomeActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:17:9-26:20
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:19:13-35
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:20:13-35
 	android:exported
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:19:13-36
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:20:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:21:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:17:19-50
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:18:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:22:13-25:29
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.example.abcallmobile.ClientSelectionActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:9-30:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:29:9-31:56
 	android:exported
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:29:13-37
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:30:13-37
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:30:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:31:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:28:19-58
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:29:19-58
 activity#com.example.abcallmobile.DetailActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:9-34:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:33:9-35:56
 	android:exported
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:33:13-36
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:34:13-36
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:34:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:35:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:33:19-49
 activity#com.example.abcallmobile.CreateIncidentActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:36:9-38:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:37:9-39:56
 	android:exported
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:38:13-36
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:38:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:39:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:36:19-57
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:37:19-57
 activity#com.example.abcallmobile.FAQActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:9-41:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:41:9-42:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:41:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:42:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:40:19-46
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:41:19-46
 activity#com.example.abcallmobile.ChatbotActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:43:9-44:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:44:9-45:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:44:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:45:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:43:19-50
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:44:19-50
 activity#com.example.abcallmobile.SolucionesActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:46:9-47:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:47:9-48:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:47:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:48:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:46:19-53
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:47:19-53
 activity#com.example.abcallmobile.IdentificacionUsuarioActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:49:9-50:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:50:9-51:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:50:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:51:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:49:19-64
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:50:19-64
 activity#com.example.abcallmobile.ListaIncidentesActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:52:9-53:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:53:9-54:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:53:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:54:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:52:19-58
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:53:19-58
 activity#com.example.abcallmobile.ConfiguracionActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:55:9-56:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:56:9-57:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:56:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:57:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:55:19-56
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:56:19-56
 activity#com.example.abcallmobile.ConfirmacionLecturaActivity
-ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:58:9-59:56
+ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:59:9-60:56
 	android:theme
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:59:13-54
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:60:13-54
 	android:name
-		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:58:19-62
+		ADDED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml:59:19-62
 uses-sdk
 INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Propietario\Downloads\ABCallMobileProject_FINAL\app\src\main\AndroidManifest.xml

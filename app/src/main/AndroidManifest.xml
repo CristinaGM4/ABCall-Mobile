@@ -8,11 +8,12 @@
         android:name=".MyApp"
         android:allowBackup="true"
         android:label="ABCallMobile"
-        android:icon="@android:drawable/star_on"
+        android:icon="@mipmap/ic_launcher"
         android:roundIcon="@android:drawable/star_on"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
         android:networkSecurityConfig="@xml/network_security_config">
+
 
         <activity android:name=".WelcomeActivity"
             android:exported="true"

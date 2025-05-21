@@ -37,6 +37,7 @@ class ChatbotActivity : BaseActivity() {
             if (ultimoMensajeUsuario.isNotEmpty()) {
                 val intent = Intent(this, CreateIncidentActivity::class.java)
                 intent.putExtra("descripcionChatbot", ultimoMensajeUsuario)
+                intent.putExtra("vieneDelChatbot", true) // 👈 esto es lo que faltaba
                 startActivity(intent)
 
                 // 🧹 Limpiar chat e input
@@ -94,7 +95,7 @@ class ChatbotActivity : BaseActivity() {
             Regex(".*\\b\\d{6,10}\\b.*").matches(lower) ->
                 "Gracias. ¿Cuál es el problema que estás presentando?"
 
-            contienePalabraEsperada(listOf("no carga", "no abre", "página", "bloqueado", "error", "pagina lenta")) ->
+            contienePalabraEsperada(listOf("no carga", "no abre", "página", "bloqueado", "error", "pagina lenta", "el sistema no funciona")) ->
                 "Lo siento 😓. Intenta lo siguiente:\n1. Verifica tu conexión a internet.\n2. Cierra y vuelve a abrir la app.\n3. Si el problema persiste, crea un incidente."
 
             contienePalabraEsperada(listOf("internet", "sin conexión", "wifi", "se cayó")) ->
@@ -108,6 +109,21 @@ class ChatbotActivity : BaseActivity() {
 
             contienePalabraEsperada(listOf("gracias", "muchas gracias")) ->
                 "¡Con gusto! 😊 ¿Necesitas algo más?"
+
+            contienePalabraEsperada(listOf("no necesito nada más", "todo bien", "ya entendí", "todo claro", "eso era", "listo gracias")) ->
+                "¡Perfecto! Me alegra haber ayudado 😊. Estoy aquí si necesitas algo más."
+
+            contienePalabraEsperada(listOf("sí", "tengo otra duda", "otra pregunta", "otra consulta", "más ayuda")) ->
+                "Claro, dime qué más necesitas y con gusto te ayudo 🤗."
+
+            contienePalabraEsperada(listOf("perfecto", "excelente", "super", "muy amable", "gracias por todo")) ->
+                "¡Gracias a ti por usar ABCall! 🌟 Recuerda que estoy disponible si necesitas algo más."
+
+            contienePalabraEsperada(listOf("gracias otra vez", "gracias de nuevo", "gracias muchas gracias")) ->
+                "¡Con mucho gusto! 🤖 Siempre es un placer ayudarte."
+
+            contienePalabraEsperada(listOf("horario", "atención", "cuándo responden", "a qué hora trabajan")) ->
+                "Nuestro horario de atención es de lunes a viernes, de 8 a.m. a 6 p.m. ¡Con gusto te ayudaremos dentro de ese horario!"
 
             contienePalabraEsperada(listOf("adiós", "hasta luego", "chao", "nos vemos")) ->
                 "¡Hasta pronto! 👋 No dudes en escribirme si necesitas algo más."
