@@ -9,7 +9,7 @@ import retrofit2.http.Query
 
 interface ApiService {
     @POST("incidentes/v1/crear")
-    fun crearIncidente(@Body body: Map<String, String>): Call<Void>
+    fun crearIncidente(@Body body: Map<String, String>): Call<CrearIncidenteResponse>
 
     @POST("incidentes/v1/consultar")
     fun consultarIncidentes(@Body peticion: PeticionConsulta): Call<IncidenteResponse>
